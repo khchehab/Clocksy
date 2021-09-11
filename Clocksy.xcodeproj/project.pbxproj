@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		293BC1B026DBAC28003D1231 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1AF26DBAC28003D1231 /* Constants.swift */; };
+		293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */; };
+		293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B426DBB648003D1231 /* CGRect+Circle.swift */; };
+		29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29497D9026DA7DB3000AB6DE /* ClocksyApp.swift */; };
+		29497D9526DA7DB4000AB6DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29497D9426DA7DB4000AB6DE /* Assets.xcassets */; };
+		29497DA726DA83BD000AB6DE /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29497DA626DA83BD000AB6DE /* AnalogClockView.swift */; };
+		296EE38F26DD469F00307FA9 /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE38E26DD469F00307FA9 /* TimeFunctions.swift */; };
+		296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */; };
+		296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39526DD79DB00307FA9 /* BorderView.swift */; };
+		299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314226E9288E002E9034 /* DigitalDigit.swift */; };
+		299F314626E92C0E002E9034 /* DigitBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314526E92C0E002E9034 /* DigitBaseView.swift */; };
+		299F314A26E92FDB002E9034 /* DigitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314926E92FDB002E9034 /* DigitView.swift */; };
+		299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314B26E937FF002E9034 /* DigitalClockView.swift */; };
+		29EBACFB26E015CF00026739 /* BorderBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBACFA26E015CF00026739 /* BorderBaseView.swift */; };
+		29EBACFE26E0160000026739 /* ClassicBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBACFD26E0160000026739 /* ClassicBorder.swift */; };
+		29EBAD0026E0174700026739 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBACFF26E0174700026739 /* IndicatorView.swift */; };
+		29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0426E14D2F00026739 /* IndicatorBaseView.swift */; };
+		29EBAD0726E14D9A00026739 /* ClassicIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0626E14D9A00026739 /* ClassicIndicator.swift */; };
+		29EBAD0926E2795E00026739 /* ArmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0826E2795E00026739 /* ArmView.swift */; };
+		29EBAD0B26E2A39A00026739 /* Angle+Pi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */; };
+		29EBAD0E26E2A74F00026739 /* ClassicArm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0D26E2A74F00026739 /* ClassicArm.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		293BC1AF26DBAC28003D1231 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		293BC1B426DBB648003D1231 /* CGRect+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Circle.swift"; sourceTree = "<group>"; };
+		29497D8D26DA7DB3000AB6DE /* Clocksy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clocksy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29497D9026DA7DB3000AB6DE /* ClocksyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksyApp.swift; sourceTree = "<group>"; };
+		29497D9426DA7DB4000AB6DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29497D9926DA7DB4000AB6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29497DA626DA83BD000AB6DE /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
+		296EE38E26DD469F00307FA9 /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
+		296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryProxy+Circle.swift"; sourceTree = "<group>"; };
+		296EE39526DD79DB00307FA9 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
+		299F314226E9288E002E9034 /* DigitalDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalDigit.swift; sourceTree = "<group>"; };
+		299F314526E92C0E002E9034 /* DigitBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitBaseView.swift; sourceTree = "<group>"; };
+		299F314926E92FDB002E9034 /* DigitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitView.swift; sourceTree = "<group>"; };
+		299F314B26E937FF002E9034 /* DigitalClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClockView.swift; sourceTree = "<group>"; };
+		29EBACFA26E015CF00026739 /* BorderBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderBaseView.swift; sourceTree = "<group>"; };
+		29EBACFD26E0160000026739 /* ClassicBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicBorder.swift; sourceTree = "<group>"; };
+		29EBACFF26E0174700026739 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		29EBAD0426E14D2F00026739 /* IndicatorBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorBaseView.swift; sourceTree = "<group>"; };
+		29EBAD0626E14D9A00026739 /* ClassicIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicIndicator.swift; sourceTree = "<group>"; };
+		29EBAD0826E2795E00026739 /* ArmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmView.swift; sourceTree = "<group>"; };
+		29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Pi.swift"; sourceTree = "<group>"; };
+		29EBAD0D26E2A74F00026739 /* ClassicArm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicArm.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29497D8A26DA7DB3000AB6DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		293BC1AE26DBAC1B003D1231 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				293BC1AF26DBAC28003D1231 /* Constants.swift */,
+				296EE38E26DD469F00307FA9 /* TimeFunctions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		293BC1B126DBAED0003D1231 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */,
+				293BC1B426DBB648003D1231 /* CGRect+Circle.swift */,
+				296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */,
+				29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		29497D8426DA7DB3000AB6DE = {
+			isa = PBXGroup;
+			children = (
+				29497D8F26DA7DB3000AB6DE /* Clocksy */,
+				29497D8E26DA7DB3000AB6DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29497D8E26DA7DB3000AB6DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29497D8D26DA7DB3000AB6DE /* Clocksy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29497D8F26DA7DB3000AB6DE /* Clocksy */ = {
+			isa = PBXGroup;
+			children = (
+				29497D9026DA7DB3000AB6DE /* ClocksyApp.swift */,
+				29497DA026DA7F47000AB6DE /* Views */,
+				293BC1B126DBAED0003D1231 /* Extensions */,
+				293BC1AE26DBAC1B003D1231 /* Utilities */,
+				29497D9F26DA7E62000AB6DE /* Resources */,
+			);
+			path = Clocksy;
+			sourceTree = "<group>";
+		};
+		29497D9F26DA7E62000AB6DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29497D9426DA7DB4000AB6DE /* Assets.xcassets */,
+				29497D9926DA7DB4000AB6DE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29497DA026DA7F47000AB6DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				296EE39426DD788700307FA9 /* Components */,
+				29497DA626DA83BD000AB6DE /* AnalogClockView.swift */,
+				299F314B26E937FF002E9034 /* DigitalClockView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		296EE39426DD788700307FA9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				29EBACF926E015A800026739 /* Bases */,
+				29EBACFC26E015F000026739 /* Borders */,
+				29EBAD0126E0175600026739 /* Indicators */,
+				29EBAD0C26E2A74000026739 /* Arms */,
+				299F314426E92A54002E9034 /* Digits */,
+				296EE39526DD79DB00307FA9 /* BorderView.swift */,
+				29EBACFF26E0174700026739 /* IndicatorView.swift */,
+				29EBAD0826E2795E00026739 /* ArmView.swift */,
+				299F314926E92FDB002E9034 /* DigitView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		299F314426E92A54002E9034 /* Digits */ = {
+			isa = PBXGroup;
+			children = (
+				299F314226E9288E002E9034 /* DigitalDigit.swift */,
+			);
+			path = Digits;
+			sourceTree = "<group>";
+		};
+		29EBACF926E015A800026739 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				29EBACFA26E015CF00026739 /* BorderBaseView.swift */,
+				29EBAD0426E14D2F00026739 /* IndicatorBaseView.swift */,
+				299F314526E92C0E002E9034 /* DigitBaseView.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		29EBACFC26E015F000026739 /* Borders */ = {
+			isa = PBXGroup;
+			children = (
+				29EBACFD26E0160000026739 /* ClassicBorder.swift */,
+			);
+			path = Borders;
+			sourceTree = "<group>";
+		};
+		29EBAD0126E0175600026739 /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				29EBAD0626E14D9A00026739 /* ClassicIndicator.swift */,
+			);
+			path = Indicators;
+			sourceTree = "<group>";
+		};
+		29EBAD0C26E2A74000026739 /* Arms */ = {
+			isa = PBXGroup;
+			children = (
+				29EBAD0D26E2A74F00026739 /* ClassicArm.swift */,
+			);
+			path = Arms;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29497D8C26DA7DB3000AB6DE /* Clocksy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29497D9C26DA7DB4000AB6DE /* Build configuration list for PBXNativeTarget "Clocksy" */;
+			buildPhases = (
+				29497D8926DA7DB3000AB6DE /* Sources */,
+				29497D8A26DA7DB3000AB6DE /* Frameworks */,
+				29497D8B26DA7DB3000AB6DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clocksy;
+			productName = Clocksy;
+			productReference = 29497D8D26DA7DB3000AB6DE /* Clocksy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29497D8526DA7DB3000AB6DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					29497D8C26DA7DB3000AB6DE = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 29497D8826DA7DB3000AB6DE /* Build configuration list for PBXProject "Clocksy" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29497D8426DA7DB3000AB6DE;
+			productRefGroup = 29497D8E26DA7DB3000AB6DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29497D8C26DA7DB3000AB6DE /* Clocksy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29497D8B26DA7DB3000AB6DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29497D9526DA7DB4000AB6DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29497D8926DA7DB3000AB6DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */,
+				29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */,
+				299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */,
+				293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */,
+				29EBAD0B26E2A39A00026739 /* Angle+Pi.swift in Sources */,
+				29EBAD0926E2795E00026739 /* ArmView.swift in Sources */,
+				29EBACFE26E0160000026739 /* ClassicBorder.swift in Sources */,
+				29EBAD0726E14D9A00026739 /* ClassicIndicator.swift in Sources */,
+				29EBACFB26E015CF00026739 /* BorderBaseView.swift in Sources */,
+				29EBAD0026E0174700026739 /* IndicatorView.swift in Sources */,
+				299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */,
+				299F314626E92C0E002E9034 /* DigitBaseView.swift in Sources */,
+				296EE38F26DD469F00307FA9 /* TimeFunctions.swift in Sources */,
+				296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */,
+				296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */,
+				293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */,
+				29EBAD0E26E2A74F00026739 /* ClassicArm.swift in Sources */,
+				299F314A26E92FDB002E9034 /* DigitView.swift in Sources */,
+				29497DA726DA83BD000AB6DE /* AnalogClockView.swift in Sources */,
+				293BC1B026DBAC28003D1231 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		29497D9A26DA7DB4000AB6DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29497D9B26DA7DB4000AB6DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29497D9D26DA7DB4000AB6DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 4YJ897CWP8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Clocksy/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.khaled.Clocksy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		29497D9E26DA7DB4000AB6DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 4YJ897CWP8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Clocksy/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.khaled.Clocksy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29497D8826DA7DB3000AB6DE /* Build configuration list for PBXProject "Clocksy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29497D9A26DA7DB4000AB6DE /* Debug */,
+				29497D9B26DA7DB4000AB6DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29497D9C26DA7DB4000AB6DE /* Build configuration list for PBXNativeTarget "Clocksy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29497D9D26DA7DB4000AB6DE /* Debug */,
+				29497D9E26DA7DB4000AB6DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29497D8526DA7DB3000AB6DE /* Project object */;
+}
