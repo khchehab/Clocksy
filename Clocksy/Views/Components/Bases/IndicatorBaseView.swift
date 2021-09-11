@@ -10,7 +10,7 @@ import SwiftUI
 protocol IndicatorBaseView {
     associatedtype Content: View
     
-    static var indicatorWidthRatio: CGFloat { get }
+    static var indicatorWidthRatio:        CGFloat { get }
     static var indicatorBorderMarginRatio: CGFloat { get }
     
     func content(geometry: GeometryProxy) -> Content
@@ -19,11 +19,11 @@ protocol IndicatorBaseView {
 protocol IndicatorTextBaseView {
     associatedtype Content: View
     
-    static var indicatorTextWidthRatio: CGFloat { get }
-    static var indicatorTextBorderMarginRatio: CGFloat { get }
-    static var indicatorTextFontName: String { get }
-    static var indicatorTextFontSizeRatio: CGFloat { get }
-    static var indicatorTextFontWeight: Font.Weight { get }
+    static var indicatorTextWidthRatio:        CGFloat     { get }
+    static var indicatorTextBorderMarginRatio: CGFloat     { get }
+    static var indicatorTextFontName:          String      { get }
+    static var indicatorTextFontSizeRatio:     CGFloat     { get }
+    static var indicatorTextFontWeight:        Font.Weight { get }
     
     func content(geometry: GeometryProxy, display text: String) -> Content
 }
