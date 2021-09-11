@@ -10,7 +10,6 @@ import SwiftUI
 struct AnalogClockView: View {
     @Binding var now: Date
     var rect: CGRect
-    var padding: CGFloat
     
     var body: some View {
         ZStack {
@@ -29,7 +28,7 @@ struct AnalogClockView: View {
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { proxy in
-            AnalogClockView(now: .constant(Date()), rect: proxy.circle, padding: 2)
+            AnalogClockView(now: .constant(Date()), rect: proxy.circle)
         }
     }
 }
