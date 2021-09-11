@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClassicBorder: BorderBaseView {
-    static var borderWidthRatio: CGFloat { 1 / 75 }
+    static var borderWidthRatio: CGFloat { 1 / 50 }
     
     func content(geometry: GeometryProxy) -> some View {
         Circle()
