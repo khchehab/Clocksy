@@ -9,7 +9,12 @@ import SwiftUI
 
 func getComponents(of date: Date) -> (hour: Int, minute: Int, second: Int) {
     let dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
-    let hour = dateComponents.hour! % 12
+    var hour = dateComponents.hour!
+    
+    if hour > 12 {
+        hour -= 12
+    }
+    
     let minute = dateComponents.minute!
     let second = dateComponents.second!
     return (hour, minute, second)
