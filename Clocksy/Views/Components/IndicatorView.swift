@@ -16,8 +16,12 @@ struct IndicatorView: View {
                          borderMarginRatio: CGFloat(preferences.indicatorHourBorderMarginRatio))
     }
     
-    private var hourTextIndicator: some IndicatorTextBaseView {
-        ClassicHourTextIndicator()
+    private var hourTextIndicator: some IndicatorBaseView {
+        ClassicHourTextIndicator(widthRatio: CGFloat(preferences.indicatorHourTextWidthRatio),
+                                 borderMarginRatio: CGFloat(preferences.indicatorHourTextBorderMarginRatio),
+                                 fontName: preferences.indicatorHourTextFontName,
+                                 fontSizeRatio: CGFloat(preferences.indicatorHourTextFontSizeRatio),
+                                 fontWeightValue: preferences.indicatorHourTextFontWeight)
     }
     
     private var minuteIndicator: some IndicatorBaseView {
@@ -25,30 +29,14 @@ struct IndicatorView: View {
                          borderMarginRatio: CGFloat(preferences.indicatorMinuteBorderMarginRatio))
     }
     
-    // MARK: - Indicator border margin ratios for each indicator type
-    
-    private var hourIndicatorTextBorderMarginRatio: CGFloat {
-        type(of: hourTextIndicator).indicatorTextBorderMarginRatio
-    }
-    
     var body: some View {
         GeometryReader { proxy in
             ForEach(1..<61) { timeDigit in
-                // time digit is an hour
-                if timeDigit % 5 == 0 {
+                if timeDigit % 5 == 0 { // time digit is an hour
                     let hour = timeDigit / 5
-                    let angle = Angle(degrees: Constants.degreesPerHour * Double(hour))
                     
                     hourIndicator.content(component: .hours, value: hour, geometry: proxy)
-                    
-//                    hourIndicator.content(geometry: proxy)
-//                        .position(CGPoint(at: angle,
-//                                          in: proxy.circle,
-//                                          margin: hourIndicatorBorderMarginRatio * proxy.radius))
-                    hourTextIndicator.content(geometry: proxy, display: String(hour))
-                        .position(CGPoint(at: angle,
-                                          in: proxy.circle,
-                                          margin: hourIndicatorTextBorderMarginRatio * proxy.radius))
+                    hourTextIndicator.content(component: .hours, value: hour, geometry: proxy)
                 } else { // time digit is a minute
                     minuteIndicator.content(component: .minutes, value: timeDigit, geometry: proxy)
                 }

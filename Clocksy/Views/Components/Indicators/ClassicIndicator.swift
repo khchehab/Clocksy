@@ -21,16 +21,29 @@ struct ClassicIndicator: IndicatorBaseView {
     }
 }
 
-struct ClassicHourTextIndicator: IndicatorTextBaseView {
-    static var indicatorTextWidthRatio:        CGFloat     { 1 / 15 }
-    static var indicatorTextBorderMarginRatio: CGFloat     { 1 / 4  }
-    static var indicatorTextFontName:          String      { "HelveticaNeue" }
-    static var indicatorTextFontSizeRatio:     CGFloat     { 1 / 8 }
-    static var indicatorTextFontWeight:        Font.Weight { .bold }
+struct ClassicHourTextIndicator: IndicatorBaseView {
+    var widthRatio: CGFloat
+    var borderMarginRatio: CGFloat
+    var fontName: String
+    var fontSizeRatio: CGFloat
+    var fontWeightValue: String
     
-    func content(geometry: GeometryProxy, display text: String) -> some View {
-        Text(text)
-            .fontWeight(Self.indicatorTextFontWeight)
-            .font(.custom(Self.indicatorTextFontName, size: geometry.radius * Self.indicatorTextFontSizeRatio))
+    var fontWeight: Font.Weight {
+        switch(fontWeightValue) {
+        case "bold":
+            return Font.Weight.bold
+        default:
+            return Font.Weight.regular
+        }
+    }
+    
+    func content(component: TimeComponent, value: Int, geometry: GeometryProxy) -> some View {
+        let timeComponentMultiplier = component == .hours ? Constants.degreesPerHour : Constants.degreesPerMinute
+        let angle = Angle(degrees: timeComponentMultiplier * Double(value))
+        
+        return Text(String(value))
+                .fontWeight(fontWeight)
+                .font(.custom(fontName, size: geometry.radius * fontSizeRatio))
+                .position(CGPoint(at: angle, in: geometry.circle, margin: borderMarginRatio * geometry.radius))
     }
 }
