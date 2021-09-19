@@ -16,7 +16,7 @@ struct DigitalClockView: View {
             let width = proxy.size.width
             let padding = CGFloat(preferences.paddingRatio) * width
             let (hours, minutes, seconds) = getComponents(of: now)
-            DigitView(hours: hours, minutes: minutes, seconds: seconds, width: width - (padding * 6), padding: padding)
+            DigitsView(hours: hours, minutes: minutes, seconds: seconds, width: width - (padding * 6), padding: padding)
                 .frame(width: width)
         }
     }

@@ -1,5 +1,5 @@
 //
-//  DigitView.swift
+//  DigitsView.swift
 //  Clocksy
 //
 //  Created by Khaled Chehab on 08/09/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DigitView: View {
+struct DigitsView: View {
     var hours: Int
     var minutes: Int
     var seconds: Int
@@ -56,8 +56,8 @@ struct DigitView: View {
     }
 }
 
-struct DigitView_Previews: PreviewProvider {
+struct DigitsView_Previews: PreviewProvider {
     static var previews: some View {
-        DigitView(hours: 88, minutes: 88, seconds: 88, width: 300, padding: 2)
+        DigitsView(hours: 88, minutes: 88, seconds: 88, width: 300, padding: 2)
     }
 }
