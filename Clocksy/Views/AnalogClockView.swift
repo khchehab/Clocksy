@@ -21,7 +21,6 @@ struct AnalogClockView: View {
                 let (hours, minutes, seconds) = getComponents(of: now)
                 ArmsView(hours: hours, minutes: minutes, seconds: seconds)
             }
-            .frame(width: proxy.circle.width, height: proxy.circle.height)
         }
     }
 }
