@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2921A09926F785FA00D31490 /* ArmBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09826F785FA00D31490 /* ArmBaseView.swift */; };
+		2921A09B26F7A76200D31490 /* ClocksyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09A26F7A76200D31490 /* ClocksyView.swift */; };
 		293BC1B026DBAC28003D1231 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1AF26DBAC28003D1231 /* Constants.swift */; };
 		293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */; };
 		293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B426DBB648003D1231 /* CGRect+Circle.swift */; };
@@ -15,6 +16,7 @@
 		29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29497D9026DA7DB3000AB6DE /* ClocksyApp.swift */; };
 		29497D9526DA7DB4000AB6DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29497D9426DA7DB4000AB6DE /* Assets.xcassets */; };
 		29497DA726DA83BD000AB6DE /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29497DA626DA83BD000AB6DE /* AnalogClockView.swift */; };
+		29626E8926F7AC2400FA9F13 /* ClocksyTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29626E8826F7AC2400FA9F13 /* ClocksyTab.swift */; };
 		296EE38F26DD469F00307FA9 /* TimeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE38E26DD469F00307FA9 /* TimeUtilities.swift */; };
 		296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */; };
 		296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39526DD79DB00307FA9 /* BorderView.swift */; };
@@ -36,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		2921A09826F785FA00D31490 /* ArmBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmBaseView.swift; sourceTree = "<group>"; };
+		2921A09A26F7A76200D31490 /* ClocksyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksyView.swift; sourceTree = "<group>"; };
 		293BC1AF26DBAC28003D1231 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		293BC1B426DBB648003D1231 /* CGRect+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Circle.swift"; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		29497D9426DA7DB4000AB6DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29497D9926DA7DB4000AB6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29497DA626DA83BD000AB6DE /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
+		29626E8826F7AC2400FA9F13 /* ClocksyTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksyTab.swift; sourceTree = "<group>"; };
 		296EE38E26DD469F00307FA9 /* TimeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtilities.swift; sourceTree = "<group>"; };
 		296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryProxy+Circle.swift"; sourceTree = "<group>"; };
 		296EE39526DD79DB00307FA9 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			children = (
 				294302E726F600370023D83F /* ClocksyPreferences.swift */,
 				2977800026F748BF001E2E1C /* ClocksyPreferenceKey.swift */,
+				29626E8826F7AC2400FA9F13 /* ClocksyTab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				296EE39426DD788700307FA9 /* Components */,
 				29497DA626DA83BD000AB6DE /* AnalogClockView.swift */,
 				299F314B26E937FF002E9034 /* DigitalClockView.swift */,
+				2921A09A26F7A76200D31490 /* ClocksyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,10 +302,12 @@
 				299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */,
 				299F314626E92C0E002E9034 /* DigitBaseView.swift in Sources */,
 				296EE38F26DD469F00307FA9 /* TimeUtilities.swift in Sources */,
+				29626E8926F7AC2400FA9F13 /* ClocksyTab.swift in Sources */,
 				296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */,
 				296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */,
 				293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */,
 				2977800326F74FB2001E2E1C /* Defaults.swift in Sources */,
+				2921A09B26F7A76200D31490 /* ClocksyView.swift in Sources */,
 				29EBAD0E26E2A74F00026739 /* ClassicArm.swift in Sources */,
 				299F314A26E92FDB002E9034 /* DigitView.swift in Sources */,
 				29497DA726DA83BD000AB6DE /* AnalogClockView.swift in Sources */,
