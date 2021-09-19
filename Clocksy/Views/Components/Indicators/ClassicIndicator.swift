@@ -11,17 +11,14 @@ struct ClassicIndicator: IndicatorBaseView {
     var widthRatio: CGFloat
     var borderMarginRatio: CGFloat
     
-    func content(component: TimeComponent, value: Int, geometry: GeometryProxy) -> some View {
-        let timeComponentMultiplier = component == .hours ? Constants.degreesPerHour : Constants.degreesPerMinute
-        let angle = Angle(degrees: timeComponentMultiplier * Double(value))
-        
+    func content(at angle: Angle, geometry: GeometryProxy) -> some View {
         return Circle()
                 .frame(width: widthRatio * geometry.radius, height: borderMarginRatio * geometry.radius)
                 .position(CGPoint(at: angle, in: geometry.circle, margin: borderMarginRatio * geometry.radius))
     }
 }
 
-struct ClassicHourTextIndicator: IndicatorBaseView {
+struct ClassicHourTextIndicator: IndicatorTextBaseView {
     var widthRatio: CGFloat
     var borderMarginRatio: CGFloat
     var fontName: String
@@ -37,10 +34,7 @@ struct ClassicHourTextIndicator: IndicatorBaseView {
         }
     }
     
-    func content(component: TimeComponent, value: Int, geometry: GeometryProxy) -> some View {
-        let timeComponentMultiplier = component == .hours ? Constants.degreesPerHour : Constants.degreesPerMinute
-        let angle = Angle(degrees: timeComponentMultiplier * Double(value))
-        
+    func content(at angle: Angle, value: Int, geometry: GeometryProxy) -> some View {
         return Text(String(value))
                 .fontWeight(fontWeight)
                 .font(.custom(fontName, size: geometry.radius * fontSizeRatio))

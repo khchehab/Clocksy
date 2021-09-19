@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2921A09726F781E200D31490 /* TimeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09626F781E200D31490 /* TimeComponent.swift */; };
+		2921A09926F785FA00D31490 /* ArmBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09826F785FA00D31490 /* ArmBaseView.swift */; };
 		293BC1B026DBAC28003D1231 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1AF26DBAC28003D1231 /* Constants.swift */; };
 		293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */; };
 		293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B426DBB648003D1231 /* CGRect+Circle.swift */; };
@@ -29,13 +30,14 @@
 		29EBAD0026E0174700026739 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBACFF26E0174700026739 /* IndicatorView.swift */; };
 		29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0426E14D2F00026739 /* IndicatorBaseView.swift */; };
 		29EBAD0726E14D9A00026739 /* ClassicIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0626E14D9A00026739 /* ClassicIndicator.swift */; };
-		29EBAD0926E2795E00026739 /* ArmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0826E2795E00026739 /* ArmView.swift */; };
+		29EBAD0926E2795E00026739 /* ArmsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0826E2795E00026739 /* ArmsView.swift */; };
 		29EBAD0B26E2A39A00026739 /* Angle+Pi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */; };
 		29EBAD0E26E2A74F00026739 /* ClassicArm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0D26E2A74F00026739 /* ClassicArm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2921A09626F781E200D31490 /* TimeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponent.swift; sourceTree = "<group>"; };
+		2921A09826F785FA00D31490 /* ArmBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmBaseView.swift; sourceTree = "<group>"; };
 		293BC1AF26DBAC28003D1231 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		293BC1B426DBB648003D1231 /* CGRect+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Circle.swift"; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		29EBACFF26E0174700026739 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		29EBAD0426E14D2F00026739 /* IndicatorBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorBaseView.swift; sourceTree = "<group>"; };
 		29EBAD0626E14D9A00026739 /* ClassicIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicIndicator.swift; sourceTree = "<group>"; };
-		29EBAD0826E2795E00026739 /* ArmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmView.swift; sourceTree = "<group>"; };
+		29EBAD0826E2795E00026739 /* ArmsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmsView.swift; sourceTree = "<group>"; };
 		29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Pi.swift"; sourceTree = "<group>"; };
 		29EBAD0D26E2A74F00026739 /* ClassicArm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicArm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,7 +166,7 @@
 				299F314426E92A54002E9034 /* Digits */,
 				296EE39526DD79DB00307FA9 /* BorderView.swift */,
 				29EBACFF26E0174700026739 /* IndicatorView.swift */,
-				29EBAD0826E2795E00026739 /* ArmView.swift */,
+				29EBAD0826E2795E00026739 /* ArmsView.swift */,
 				299F314926E92FDB002E9034 /* DigitView.swift */,
 			);
 			path = Components;
@@ -184,6 +186,7 @@
 				29EBACFA26E015CF00026739 /* BorderBaseView.swift */,
 				29EBAD0426E14D2F00026739 /* IndicatorBaseView.swift */,
 				299F314526E92C0E002E9034 /* DigitBaseView.swift */,
+				2921A09826F785FA00D31490 /* ArmBaseView.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -284,10 +287,11 @@
 				294302E826F600370023D83F /* ClocksyPreferences.swift in Sources */,
 				29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */,
 				299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */,
+				2921A09926F785FA00D31490 /* ArmBaseView.swift in Sources */,
 				2921A09726F781E200D31490 /* TimeComponent.swift in Sources */,
 				293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */,
 				29EBAD0B26E2A39A00026739 /* Angle+Pi.swift in Sources */,
-				29EBAD0926E2795E00026739 /* ArmView.swift in Sources */,
+				29EBAD0926E2795E00026739 /* ArmsView.swift in Sources */,
 				29EBACFE26E0160000026739 /* ClassicBorder.swift in Sources */,
 				29EBAD0726E14D9A00026739 /* ClassicIndicator.swift in Sources */,
 				2977800126F748BF001E2E1C /* ClocksyPreferenceKey.swift in Sources */,

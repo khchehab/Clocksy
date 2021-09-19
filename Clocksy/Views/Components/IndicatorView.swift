@@ -10,13 +10,13 @@ import SwiftUI
 struct IndicatorView: View {
     @EnvironmentObject var preferences: ClocksyPreferences
     
-    // MARK: - Indicator instances as style
+    // MARK: - Indicator instances per style
     private var hourIndicator: some IndicatorBaseView {
         ClassicIndicator(widthRatio: CGFloat(preferences.indicatorHourWidthRatio),
                          borderMarginRatio: CGFloat(preferences.indicatorHourBorderMarginRatio))
     }
     
-    private var hourTextIndicator: some IndicatorBaseView {
+    private var hourTextIndicator: some IndicatorTextBaseView {
         ClassicHourTextIndicator(widthRatio: CGFloat(preferences.indicatorHourTextWidthRatio),
                                  borderMarginRatio: CGFloat(preferences.indicatorHourTextBorderMarginRatio),
                                  fontName: preferences.indicatorHourTextFontName,
@@ -34,11 +34,14 @@ struct IndicatorView: View {
             ForEach(1..<61) { timeDigit in
                 if timeDigit % 5 == 0 { // time digit is an hour
                     let hour = timeDigit / 5
+                    let angle = Angle(degrees: Constants.degreesPerHour * Double(hour))
                     
-                    hourIndicator.content(component: .hours, value: hour, geometry: proxy)
-                    hourTextIndicator.content(component: .hours, value: hour, geometry: proxy)
+                    hourIndicator.content(at: angle, geometry: proxy)
+                    hourTextIndicator.content(at: angle, value: hour, geometry: proxy)
                 } else { // time digit is a minute
-                    minuteIndicator.content(component: .minutes, value: timeDigit, geometry: proxy)
+                    let angle = Angle(degrees: Constants.degreesPerMinute * Double(timeDigit))
+                    
+                    minuteIndicator.content(at: angle, geometry: proxy)
                 }
             }
         }

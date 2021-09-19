@@ -19,7 +19,7 @@ struct AnalogClockView: View {
              
             // moving components
             let (hours, minutes, seconds) = getComponents(of: now)
-            ArmView(hours: hours, minutes: minutes, seconds: seconds)
+            ArmsView(hours: hours, minutes: minutes, seconds: seconds)
         }
         .frame(width: rect.width, height: rect.height)
     }

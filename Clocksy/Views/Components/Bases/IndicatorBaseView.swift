@@ -9,5 +9,10 @@ import SwiftUI
 
 protocol IndicatorBaseView {
     associatedtype Content: View
-    func content(component: TimeComponent, value: Int, geometry: GeometryProxy) -> Content
+    func content(at angle: Angle, geometry: GeometryProxy) -> Content
+}
+
+protocol IndicatorTextBaseView {
+    associatedtype Content: View
+    func content(at angle: Angle, value: Int, geometry: GeometryProxy) -> Content
 }
