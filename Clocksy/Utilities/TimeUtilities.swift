@@ -1,5 +1,5 @@
 //
-//  TimeFunctions.swift
+//  TimeUtilities.swift
 //  Clocksy
 //
 //  Created by Khaled Chehab on 30/08/2021.

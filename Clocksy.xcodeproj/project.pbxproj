@@ -15,7 +15,7 @@
 		29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29497D9026DA7DB3000AB6DE /* ClocksyApp.swift */; };
 		29497D9526DA7DB4000AB6DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29497D9426DA7DB4000AB6DE /* Assets.xcassets */; };
 		29497DA726DA83BD000AB6DE /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29497DA626DA83BD000AB6DE /* AnalogClockView.swift */; };
-		296EE38F26DD469F00307FA9 /* TimeFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE38E26DD469F00307FA9 /* TimeFunctions.swift */; };
+		296EE38F26DD469F00307FA9 /* TimeUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE38E26DD469F00307FA9 /* TimeUtilities.swift */; };
 		296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */; };
 		296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39526DD79DB00307FA9 /* BorderView.swift */; };
 		2977800126F748BF001E2E1C /* ClocksyPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977800026F748BF001E2E1C /* ClocksyPreferenceKey.swift */; };
@@ -45,7 +45,7 @@
 		29497D9426DA7DB4000AB6DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29497D9926DA7DB4000AB6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29497DA626DA83BD000AB6DE /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
-		296EE38E26DD469F00307FA9 /* TimeFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFunctions.swift; sourceTree = "<group>"; };
+		296EE38E26DD469F00307FA9 /* TimeUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUtilities.swift; sourceTree = "<group>"; };
 		296EE39226DD587A00307FA9 /* GeometryProxy+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryProxy+Circle.swift"; sourceTree = "<group>"; };
 		296EE39526DD79DB00307FA9 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		2977800026F748BF001E2E1C /* ClocksyPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksyPreferenceKey.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				293BC1AF26DBAC28003D1231 /* Constants.swift */,
-				296EE38E26DD469F00307FA9 /* TimeFunctions.swift */,
+				296EE38E26DD469F00307FA9 /* TimeUtilities.swift */,
 				2977800226F74FB2001E2E1C /* Defaults.swift */,
 			);
 			path = Utilities;
@@ -295,7 +295,7 @@
 				29EBAD0026E0174700026739 /* IndicatorView.swift in Sources */,
 				299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */,
 				299F314626E92C0E002E9034 /* DigitBaseView.swift in Sources */,
-				296EE38F26DD469F00307FA9 /* TimeFunctions.swift in Sources */,
+				296EE38F26DD469F00307FA9 /* TimeUtilities.swift in Sources */,
 				296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */,
 				296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */,
 				293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */,
