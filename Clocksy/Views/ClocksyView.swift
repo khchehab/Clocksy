@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClocksyView: View {
-    @State private var currentTab: ClocksyTab = .analog
+    @State private var currentTab: ClocksyTab = .clock
     @State private var now: Date = Date()
     @StateObject var preferences: ClocksyPreferences = ClocksyPreferences()
     private let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
@@ -17,21 +17,24 @@ struct ClocksyView: View {
         GeometryReader { proxy in
             NavigationView {
                 TabView(selection: $currentTab) {
-                    if preferences.showAnalogClock {
-                        AnalogClockView(now: $now, size: proxy.circle.size)
-                            .tag(ClocksyTab.analog)
-                            .tabItem {
-                                Label(ClocksyTab.analog.rawValue, systemImage: "clock")
-                            }
+                    VStack {
+                        if preferences.showAnalogClock {
+                            AnalogClockView(now: $now, size: proxy.circle.size)
+                        }
+                        
+                        if preferences.showDigitalClock {
+                            DigitalClockView(now: $now, size: proxy.size)
+                        }
                     }
-                    
-                    if preferences.showDigitalClock {
-                        DigitalClockView(now: $now, size: proxy.size)
-                            .tag(ClocksyTab.digital)
-                            .tabItem {
-                                Label(ClocksyTab.digital.rawValue, systemImage: "clock")
-                            }
+                    .tag(ClocksyTab.clock)
+                    .tabItem {
+                        Label(ClocksyTab.clock.rawValue, systemImage: "clock")
                     }
+                    Circle()
+                        .tag(ClocksyTab.settings)
+                        .tabItem {
+                            Label(ClocksyTab.settings.rawValue, systemImage: "gear")
+                        }
                 }
             }
             .environmentObject(preferences)
