@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct DigitalClockView: View {
+    @EnvironmentObject var preferences: ClocksyPreferences
     @Binding var now: Date
-    var width: CGFloat
-    var padding: CGFloat
     
     var body: some View {
-        let (hours, minutes, seconds) = getComponents(of: now)
-        DigitView(hours: hours, minutes: minutes, seconds: seconds, width: width - (padding * 6), padding: padding)
-            .frame(width: width)
+        GeometryReader { proxy in
+            let width = proxy.size.width
+            let padding = CGFloat(preferences.paddingRatio) * width
+            let (hours, minutes, seconds) = getComponents(of: now)
+            DigitView(hours: hours, minutes: minutes, seconds: seconds, width: width - (padding * 6), padding: padding)
+                .frame(width: width)
+        }
     }
 }
 
 struct DigitalClockView_Previews: PreviewProvider {
     static var previews: some View {
-        DigitalClockView(now: .constant(Date()), width: 300, padding: 2)
+        DigitalClockView(now: .constant(Date()))
+            .environmentObject(ClocksyPreferences())
     }
 }

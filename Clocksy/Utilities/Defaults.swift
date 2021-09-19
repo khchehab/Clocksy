@@ -9,6 +9,8 @@ import Foundation
 
 struct Defaults {
     static let style: [ClocksyPreferenceKey: Any] = [
+        // MARK: - Analog Clock Defaults
+        
         // MARK: - Border Defaults
         .borderWidthRatio: 1.0 / 50.0,
         
@@ -21,7 +23,11 @@ struct Defaults {
         // MARK: - Arm Defaults
         .armHourRadiusRatio: 1.0 / 100.0, .armHourMarginRatio: 1.0 / 5.0,
         .armMinuteRadiusRatio: 1.0 / 200.0, .armMinuteMarginRatio: 1.0 / 4.0,
-        .armSecondRadiusRatio: 1.0 / 400.0, .armSecondMarginRatio: 1.0 / 3.0
+        .armSecondRadiusRatio: 1.0 / 400.0, .armSecondMarginRatio: 1.0 / 3.0,
+        
+        // MARK: - Digital Clock Defaults
+        
+        .paddingRatio: 1.0 / 200.0
     ]
     
     private init() {}

@@ -30,6 +30,8 @@ import Foundation
 }
 
 final class ClocksyPreferences: ObservableObject {
+    // MARK: - Analog Clock Preferences
+    
     // MARK: - Border Preferences
     @ClocksyPreference(key: .borderWidthRatio, defaults: Defaults.style, storage: userDefaults)
     var borderWidthRatio: Double
@@ -71,6 +73,11 @@ final class ClocksyPreferences: ObservableObject {
     var armSecondRadiusRatio: Double
     @ClocksyPreference(key: .armSecondMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var armSecondMarginRatio: Double
+    
+    // MARK: - Digital Clock Preferences
+    
+    @ClocksyPreference(key: .paddingRatio, defaults: Defaults.style, storage: userDefaults)
+    var paddingRatio: Double
     
     private static var userDefaults: UserDefaults = .standard
 }

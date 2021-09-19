@@ -9,6 +9,8 @@ import Foundation
 
 // todo see if this can be improved to be more OOP or follow more the Swift features
 enum ClocksyPreferenceKey: String {
+    // MARK: - Analog Clock Keys
+    
     // MARK: - Border Keys
     case borderWidthRatio = "border.width-ratio"
     
@@ -23,4 +25,8 @@ enum ClocksyPreferenceKey: String {
     case armHourRadiusRatio = "arm.hour.radius-ratio", armHourMarginRatio = "arm.hour.margin-ratio"
     case armMinuteRadiusRatio = "arm.minute.radius-ratio", armMinuteMarginRatio = "arm.minute.margin-ratio"
     case armSecondRadiusRatio = "arm.second.radius-ratio", armSecondMarginRatio = "arm.second.margin-ratio"
+    
+    // MARK: - Digital Clock Keys
+    
+    case paddingRatio = "padding"
 }
