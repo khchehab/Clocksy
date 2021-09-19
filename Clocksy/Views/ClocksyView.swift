@@ -17,16 +17,21 @@ struct ClocksyView: View {
         GeometryReader { proxy in
             NavigationView {
                 TabView(selection: $currentTab) {
-                    AnalogClockView(now: $now, size: proxy.circle.size)
-                        .tag(ClocksyTab.analog)
-                        .tabItem {
-                            Label(ClocksyTab.analog.rawValue, systemImage: "clock")
-                        }
-                    DigitalClockView(now: $now, size: proxy.size)
-                        .tag(ClocksyTab.digital)
-                        .tabItem {
-                            Label(ClocksyTab.digital.rawValue, systemImage: "clock")
-                        }
+                    if preferences.showAnalogClock {
+                        AnalogClockView(now: $now, size: proxy.circle.size)
+                            .tag(ClocksyTab.analog)
+                            .tabItem {
+                                Label(ClocksyTab.analog.rawValue, systemImage: "clock")
+                            }
+                    }
+                    
+                    if preferences.showDigitalClock {
+                        DigitalClockView(now: $now, size: proxy.size)
+                            .tag(ClocksyTab.digital)
+                            .tabItem {
+                                Label(ClocksyTab.digital.rawValue, systemImage: "clock")
+                            }
+                    }
                 }
             }
             .environmentObject(preferences)
