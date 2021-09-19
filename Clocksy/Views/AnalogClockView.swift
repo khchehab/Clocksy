@@ -29,6 +29,7 @@ struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { proxy in
             AnalogClockView(now: .constant(Date()), rect: proxy.circle)
+                .environmentObject(ClocksyPreferences())
         }
     }
 }

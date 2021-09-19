@@ -13,7 +13,7 @@ struct BorderView: View {
     @EnvironmentObject var preferences: ClocksyPreferences
     
     private var border: some BorderBaseView {
-        ClassicBorder(borderWidthRatio: CGFloat(preferences.borderWidthRatio))
+        ClassicBorder(widthRatio: CGFloat(preferences.borderWidthRatio))
     }
     
     var body: some View {

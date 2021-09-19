@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ClassicBorder: BorderBaseView {
-    var borderWidthRatio: CGFloat
+    var widthRatio: CGFloat // if this was used for other styles see if it can be moved to the protoco
+                            // and used from there to avoid duplciating the same instance fields
     
     func content(geometry: GeometryProxy) -> some View {
         Circle()
-            .strokeBorder(lineWidth: geometry.radius * borderWidthRatio)
+            .strokeBorder(lineWidth: geometry.radius * widthRatio)
     }
 }

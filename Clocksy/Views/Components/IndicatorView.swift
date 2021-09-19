@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct IndicatorView: View {
+    @EnvironmentObject var preferences: ClocksyPreferences
+    
     // MARK: - Indicator instances as style
     private var hourIndicator: some IndicatorBaseView {
-        ClassicHourIndicator()
+        ClassicIndicator(widthRatio: CGFloat(preferences.indicatorHourWidthRatio),
+                         borderMarginRatio: CGFloat(preferences.indicatorHourBorderMarginRatio))
     }
     
     private var hourTextIndicator: some IndicatorTextBaseView {
@@ -18,20 +21,14 @@ struct IndicatorView: View {
     }
     
     private var minuteIndicator: some IndicatorBaseView {
-        ClassicMinuteIndicator()
+        ClassicIndicator(widthRatio: CGFloat(preferences.indicatorMinuteWidthRatio),
+                         borderMarginRatio: CGFloat(preferences.indicatorMinuteBorderMarginRatio))
     }
     
     // MARK: - Indicator border margin ratios for each indicator type
-    private var hourIndicatorBorderMarginRatio: CGFloat {
-        type(of: hourIndicator).indicatorBorderMarginRatio
-    }
     
     private var hourIndicatorTextBorderMarginRatio: CGFloat {
         type(of: hourTextIndicator).indicatorTextBorderMarginRatio
-    }
-    
-    private var minuteIndicatorBorderMarginRatio: CGFloat {
-        type(of: minuteIndicator).indicatorBorderMarginRatio
     }
     
     var body: some View {
@@ -42,21 +39,18 @@ struct IndicatorView: View {
                     let hour = timeDigit / 5
                     let angle = Angle(degrees: Constants.degreesPerHour * Double(hour))
                     
-                    hourIndicator.content(geometry: proxy)
-                        .position(CGPoint(at: angle,
-                                          in: proxy.circle,
-                                          margin: hourIndicatorBorderMarginRatio * proxy.radius))
+                    hourIndicator.content(component: .hours, value: hour, geometry: proxy)
+                    
+//                    hourIndicator.content(geometry: proxy)
+//                        .position(CGPoint(at: angle,
+//                                          in: proxy.circle,
+//                                          margin: hourIndicatorBorderMarginRatio * proxy.radius))
                     hourTextIndicator.content(geometry: proxy, display: String(hour))
                         .position(CGPoint(at: angle,
                                           in: proxy.circle,
                                           margin: hourIndicatorTextBorderMarginRatio * proxy.radius))
                 } else { // time digit is a minute
-                    let angle = Angle(degrees: Constants.degreesPerMinute * Double(timeDigit))
-                    
-                    minuteIndicator.content(geometry: proxy)
-                        .position(CGPoint(at: angle,
-                                          in: proxy.circle,
-                                          margin: minuteIndicatorBorderMarginRatio * proxy.radius))
+                    minuteIndicator.content(component: .minutes, value: timeDigit, geometry: proxy)
                 }
             }
         }
@@ -66,5 +60,6 @@ struct IndicatorView: View {
 struct IndicatorView_Previews: PreviewProvider {
     static var previews: some View {
         IndicatorView()
+            .environmentObject(ClocksyPreferences())
     }
 }

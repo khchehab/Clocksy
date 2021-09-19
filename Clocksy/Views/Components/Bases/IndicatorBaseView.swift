@@ -9,11 +9,7 @@ import SwiftUI
 
 protocol IndicatorBaseView {
     associatedtype Content: View
-    
-    static var indicatorWidthRatio:        CGFloat { get }
-    static var indicatorBorderMarginRatio: CGFloat { get }
-    
-    func content(geometry: GeometryProxy) -> Content
+    func content(component: TimeComponent, value: Int, geometry: GeometryProxy) -> Content
 }
 
 protocol IndicatorTextBaseView {

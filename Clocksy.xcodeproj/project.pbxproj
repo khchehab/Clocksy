@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2921A09726F781E200D31490 /* TimeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09626F781E200D31490 /* TimeComponent.swift */; };
 		293BC1B026DBAC28003D1231 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1AF26DBAC28003D1231 /* Constants.swift */; };
 		293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */; };
 		293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1B426DBB648003D1231 /* CGRect+Circle.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2921A09626F781E200D31490 /* TimeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeComponent.swift; sourceTree = "<group>"; };
 		293BC1AF26DBAC28003D1231 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		293BC1B226DBAEE0003D1231 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
 		293BC1B426DBB648003D1231 /* CGRect+Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Circle.swift"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				293BC1AF26DBAC28003D1231 /* Constants.swift */,
 				296EE38E26DD469F00307FA9 /* TimeFunctions.swift */,
 				2977800226F74FB2001E2E1C /* Defaults.swift */,
+				2921A09626F781E200D31490 /* TimeComponent.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				294302E826F600370023D83F /* ClocksyPreferences.swift in Sources */,
 				29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */,
 				299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */,
+				2921A09726F781E200D31490 /* TimeComponent.swift in Sources */,
 				293BC1B326DBAEE0003D1231 /* CGPoint+Extensions.swift in Sources */,
 				29EBAD0B26E2A39A00026739 /* Angle+Pi.swift in Sources */,
 				29EBAD0926E2795E00026739 /* ArmView.swift in Sources */,

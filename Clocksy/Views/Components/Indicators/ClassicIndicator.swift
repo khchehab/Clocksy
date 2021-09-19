@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct ClassicHourIndicator: IndicatorBaseView {
-    static var indicatorWidthRatio:        CGFloat { 1 / 15 }
-    static var indicatorBorderMarginRatio: CGFloat { 1 / 10 }
+struct ClassicIndicator: IndicatorBaseView {
+    var widthRatio: CGFloat
+    var borderMarginRatio: CGFloat
     
-    func content(geometry: GeometryProxy) -> some View {
-        Circle()
-            .frame(width: Self.indicatorWidthRatio * geometry.radius,
-                   height: Self.indicatorWidthRatio * geometry.radius)
+    func content(component: TimeComponent, value: Int, geometry: GeometryProxy) -> some View {
+        let timeComponentMultiplier = component == .hours ? Constants.degreesPerHour : Constants.degreesPerMinute
+        let angle = Angle(degrees: timeComponentMultiplier * Double(value))
+        
+        return Circle()
+                .frame(width: widthRatio * geometry.radius, height: borderMarginRatio * geometry.radius)
+                .position(CGPoint(at: angle, in: geometry.circle, margin: borderMarginRatio * geometry.radius))
     }
 }
 
@@ -29,16 +32,5 @@ struct ClassicHourTextIndicator: IndicatorTextBaseView {
         Text(text)
             .fontWeight(Self.indicatorTextFontWeight)
             .font(.custom(Self.indicatorTextFontName, size: geometry.radius * Self.indicatorTextFontSizeRatio))
-    }
-}
-
-struct ClassicMinuteIndicator: IndicatorBaseView {
-    static var indicatorWidthRatio:        CGFloat { 1 / 50 }
-    static var indicatorBorderMarginRatio: CGFloat { 1 / 10 }
-    
-    func content(geometry: GeometryProxy) -> some View {
-        Circle()
-            .frame(width: Self.indicatorWidthRatio * geometry.radius,
-                   height: Self.indicatorWidthRatio * geometry.radius)
     }
 }
