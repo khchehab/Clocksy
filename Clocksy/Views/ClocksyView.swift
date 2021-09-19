@@ -17,12 +17,12 @@ struct ClocksyView: View {
         GeometryReader { proxy in
             NavigationView {
                 TabView(selection: $currentTab) {
-                    AnalogClockView(now: .constant(Date()), size: proxy.circle.size)
+                    AnalogClockView(now: $now, size: proxy.circle.size)
                         .tag(ClocksyTab.analog)
                         .tabItem {
                             Label(ClocksyTab.analog.rawValue, systemImage: "clock")
                         }
-                    DigitalClockView(now: .constant(Date()), size: proxy.size)
+                    DigitalClockView(now: $now, size: proxy.size)
                         .tag(ClocksyTab.digital)
                         .tabItem {
                             Label(ClocksyTab.digital.rawValue, systemImage: "clock")
