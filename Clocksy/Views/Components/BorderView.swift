@@ -24,5 +24,6 @@ struct BorderView: View {
 struct BorderView_Previews: PreviewProvider {
     static var previews: some View {
         BorderView()
+            .environmentObject(ClocksyPreferences())
     }
 }
