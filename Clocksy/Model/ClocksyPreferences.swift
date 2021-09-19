@@ -1,5 +1,5 @@
 //
-//  ClocksyPreferences.swift
+//  ClocksyStylePreferences.swift
 //  Clocksy
 //
 //  Created by Khaled Chehab on 18/09/2021.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - Preference Key Wrapper
-@propertyWrapper struct ClocksyPreference<ValueType> {
+// MARK: - Style Preference Key Wrapper
+@propertyWrapper struct ClocksyStylePreference<ValueType> {
     private let key: ClocksyPreferenceKey
     private let defaults: [ClocksyPreferenceKey: Any]
     private var storage: UserDefaults
@@ -33,50 +33,50 @@ final class ClocksyPreferences: ObservableObject {
     // MARK: - Analog Clock Preferences
     
     // MARK: - Border Preferences
-    @ClocksyPreference(key: .borderWidthRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .borderWidthRatio, defaults: Defaults.style, storage: userDefaults)
     var borderWidthRatio: Double
     
     // MARK: - Indicator Preferences
-    @ClocksyPreference(key: .indicatorHourWidthRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourWidthRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourWidthRatio: Double
-    @ClocksyPreference(key: .indicatorHourBorderMarginRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourBorderMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourBorderMarginRatio: Double
     
-    @ClocksyPreference(key: .indicatorMinuteWidthRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorMinuteWidthRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorMinuteWidthRatio: Double
-    @ClocksyPreference(key: .indicatorMinuteBorderMarginRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorMinuteBorderMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorMinuteBorderMarginRatio: Double
     
-    @ClocksyPreference(key: .indicatorHourTextWidthRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourTextWidthRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourTextWidthRatio: Double
-    @ClocksyPreference(key: .indicatorHourTextBorderMarginRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourTextBorderMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourTextBorderMarginRatio: Double
-    @ClocksyPreference(key: .indicatorHourTextFontName, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourTextFontName, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourTextFontName: String
-    @ClocksyPreference(key: .indicatorHourTextFontWeight, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourTextFontWeight, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourTextFontWeight: String
-    @ClocksyPreference(key: .indicatorHourTextFontSizeRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .indicatorHourTextFontSizeRatio, defaults: Defaults.style, storage: userDefaults)
     var indicatorHourTextFontSizeRatio: Double
     
     // MARK: - Arm Preferences
-    @ClocksyPreference(key: .armHourRadiusRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .armHourRadiusRatio, defaults: Defaults.style, storage: userDefaults)
     var armHourRadiusRatio: Double
-    @ClocksyPreference(key: .armHourMarginRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .armHourMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var armHourMarginRatio: Double
     
-    @ClocksyPreference(key: .armMinuteRadiusRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .armMinuteRadiusRatio, defaults: Defaults.style, storage: userDefaults)
     var armMinuteRadiusRatio: Double
-    @ClocksyPreference(key: .armMinuteMarginRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .armMinuteMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var armMinuteMarginRatio: Double
     
-    @ClocksyPreference(key: .armSecondRadiusRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .armSecondRadiusRatio, defaults: Defaults.style, storage: userDefaults)
     var armSecondRadiusRatio: Double
-    @ClocksyPreference(key: .armSecondMarginRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .armSecondMarginRatio, defaults: Defaults.style, storage: userDefaults)
     var armSecondMarginRatio: Double
     
     // MARK: - Digital Clock Preferences
     
-    @ClocksyPreference(key: .paddingRatio, defaults: Defaults.style, storage: userDefaults)
+    @ClocksyStylePreference(key: .paddingRatio, defaults: Defaults.style, storage: userDefaults)
     var paddingRatio: Double
     
     private static var userDefaults: UserDefaults = .standard
