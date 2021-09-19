@@ -9,8 +9,5 @@ import SwiftUI
 
 protocol BorderBaseView {
     associatedtype Content: View
-    
-    static var borderWidthRatio: CGFloat { get }
-    
     func content(geometry: GeometryProxy) -> Content
 }

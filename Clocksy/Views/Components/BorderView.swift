@@ -10,8 +10,10 @@ import SwiftUI
 // MARK: - Border View
 
 struct BorderView: View {
+    @EnvironmentObject var preferences: ClocksyPreferences
+    
     private var border: some BorderBaseView {
-        ClassicBorder()
+        ClassicBorder(borderWidthRatio: CGFloat(preferences.borderWidthRatio))
     }
     
     var body: some View {

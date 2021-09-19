@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct ClocksyApp: App {
     @State private var now = Date()
+    @StateObject var preferences = ClocksyPreferences()
     private let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
     let padding: CGFloat = 2
     
@@ -20,6 +21,7 @@ struct ClocksyApp: App {
                     AnalogClockView(now: $now, rect: proxy.circle)
                     DigitalClockView(now: $now, width: proxy.size.width, padding: padding)
                 }
+                .environmentObject(preferences)
                 .onReceive(timer) { time in
                     self.now = time
                 }
