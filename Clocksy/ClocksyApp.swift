@@ -15,16 +15,18 @@ struct ClocksyApp: App {
     
     var body: some Scene {
         WindowGroup {
-            VStack {
-                AnalogClockView(now: $now)
-                DigitalClockView(now: $now)
-            }
-            .environmentObject(preferences)
-            .onReceive(timer) { time in
-                self.now = time
-            }
-            .onDisappear {
-                self.timer.upstream.connect().cancel()
+            GeometryReader { proxy in
+                VStack {
+                    AnalogClockView(now: $now, size: proxy.circle.size)
+                    DigitalClockView(now: $now, size: proxy.size)
+                }
+                .environmentObject(preferences)
+                .onReceive(timer) { time in
+                    self.now = time
+                }
+                .onDisappear {
+                    self.timer.upstream.connect().cancel()
+                }
             }
         }
     }
