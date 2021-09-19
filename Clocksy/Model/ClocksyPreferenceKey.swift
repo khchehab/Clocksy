@@ -7,8 +7,12 @@
 
 import Foundation
 
-// todo see if this can be improved to be more OOP or follow more the Swift features
 enum ClocksyPreferenceKey: String {
+    case style = "style", showAnalogClock = "show-analog-clock", showDigitalClock = "show-digital-clock"
+}
+
+// todo see if this can be improved to be more OOP or follow more the Swift features
+enum ClocksyStylePreferenceKey: String {
     // MARK: - Analog Clock Keys
     
     // MARK: - Border Keys

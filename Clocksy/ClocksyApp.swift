@@ -17,8 +17,13 @@ struct ClocksyApp: App {
         WindowGroup {
             GeometryReader { proxy in
                 VStack {
-                    AnalogClockView(now: $now, size: proxy.circle.size)
-                    DigitalClockView(now: $now, size: proxy.size)
+                    if preferences.showAnalogClock {
+                        AnalogClockView(now: $now, size: proxy.circle.size)
+                    }
+                    
+                    if preferences.showDigitalClock {
+                        DigitalClockView(now: $now, size: proxy.size)
+                    }
                 }
                 .environmentObject(preferences)
                 .onReceive(timer) { time in

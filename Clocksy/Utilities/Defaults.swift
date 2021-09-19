@@ -8,7 +8,11 @@
 import Foundation
 
 struct Defaults {
-    static let style: [ClocksyPreferenceKey: Any] = [
+    static let style: String = "classic"
+    static let showAnalogClock: Bool = true
+    static let showDigitalClock: Bool = true
+    
+    static let stylePreferences: [ClocksyStylePreferenceKey: Any] = [
         // MARK: - Analog Clock Defaults
         
         // MARK: - Border Defaults
