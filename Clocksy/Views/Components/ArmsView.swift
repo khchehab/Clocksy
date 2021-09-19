@@ -31,13 +31,13 @@ struct ArmsView: View {
     var seconds: Int
     
     var hoursAngle: Angle {
-        angle(second: Double(seconds))
+        angle(hour: Double(hours), minute: Double(minutes), second: Double(seconds))
     }
     var minutesAngle: Angle {
         angle(minute: Double(minutes), second: Double(seconds))
     }
     var secondsAngle: Angle {
-        angle(hour: Double(hours), minute: Double(minutes), second: Double(seconds))
+        angle(second: Double(seconds))
     }
     
     var body: some View {
