@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+enum TimeComponent {
+    case hours, minutes, seconds
+}
+
 func getComponents(of date: Date) -> (hour: Int, minute: Int, second: Int) {
     let dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: date)
     var hour = dateComponents.hour!
