@@ -8,7 +8,7 @@
 import Foundation
 
 struct Defaults {
-    static let style: String = "classic"
+    static let style: ClockStyle = .classic
     static let showAnalogClock: Bool = true
     static let showDigitalClock: Bool = true
     

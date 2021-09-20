@@ -1,5 +1,5 @@
 //
-//  ClocksyStylePreferences.swift
+//  ClocksyPreferences.swift
 //  Clocksy
 //
 //  Created by Khaled Chehab on 18/09/2021.
@@ -7,27 +7,8 @@
 
 import Foundation
 
-// MARK: - Style Preference Key Wrapper
-@propertyWrapper struct ClocksyStylePreference<ValueType> {
-    private let key: ClocksyStylePreferenceKey
-    private let defaults: [ClocksyStylePreferenceKey: Any]
-    private var storage: UserDefaults
-    
-    var wrappedValue: ValueType {
-        get {
-            storage.object(forKey: key.rawValue) as? ValueType ?? (defaults[key] as! ValueType)
-        }
-        set {
-            storage.set(newValue, forKey: key.rawValue)
-        }
-    }
-    
-    init(key: ClocksyStylePreferenceKey, defaults: [ClocksyStylePreferenceKey: Any], storage: UserDefaults = .standard) {
-        self.key = key
-        self.defaults = defaults
-        self.storage = storage
-    }
-}
+// todo see if the below can be consolidated into a single property wrapper struct
+// with extensions of whatever features available in swift
 
 // MARK: - Global App Key Wrapper
 @propertyWrapper struct ClocksyPreference<ValueType> {
@@ -51,15 +32,64 @@ import Foundation
     }
 }
 
+// MARK: - Global App Key Wrapper for Enums
+@propertyWrapper struct ClocksyRawRepresentablePreference<ValueType: RawRepresentable> {
+    private let key: ClocksyPreferenceKey
+    private let defaultValue: ValueType
+    private var storage: UserDefaults
+    
+    var wrappedValue: ValueType {
+        get {
+            if let rawValue = storage.object(forKey: key.rawValue) as? ValueType.RawValue,
+               let enumValue = ValueType(rawValue: rawValue) {
+                return enumValue
+            } else {
+                return defaultValue
+            }
+        }
+        set {
+            storage.set(newValue.rawValue, forKey: key.rawValue)
+        }
+    }
+    
+    init(key: ClocksyPreferenceKey, default defaultValue: ValueType, storage: UserDefaults = .standard) {
+        self.key = key
+        self.defaultValue = defaultValue
+        self.storage = storage
+    }
+}
+
+// MARK: - Style Preference Key Wrapper
+@propertyWrapper struct ClocksyStylePreference<ValueType> {
+    private let key: ClocksyStylePreferenceKey
+    private let defaults: [ClocksyStylePreferenceKey: Any]
+    private var storage: UserDefaults
+    
+    var wrappedValue: ValueType {
+        get {
+            storage.object(forKey: key.rawValue) as? ValueType ?? (defaults[key] as! ValueType)
+        }
+        set {
+            storage.set(newValue, forKey: key.rawValue)
+        }
+    }
+    
+    init(key: ClocksyStylePreferenceKey, defaults: [ClocksyStylePreferenceKey: Any], storage: UserDefaults = .standard) {
+        self.key = key
+        self.defaults = defaults
+        self.storage = storage
+    }
+}
+
 final class ClocksyPreferences: ObservableObject {
     // MARK: - Global App Preferences
     
-    @ClocksyPreference(key: .style, default: Defaults.style)
-    var style: String
+    @ClocksyRawRepresentablePreference(key: .style, default: Defaults.style)
+    var style: ClockStyle
     
-    @ClocksyPreference(key: .style, default: Defaults.showAnalogClock)
+    @ClocksyPreference(key: .showAnalogClock, default: Defaults.showAnalogClock)
     var showAnalogClock: Bool
-    @ClocksyPreference(key: .style, default: Defaults.showDigitalClock)
+    @ClocksyPreference(key: .showDigitalClock, default: Defaults.showDigitalClock)
     var showDigitalClock: Bool
     
     // MARK: - Analog Clock Preferences

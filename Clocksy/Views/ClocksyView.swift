@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClocksyView: View {
-    @State private var currentTab: ClocksyTab = .clock
+    @State private var currentTab: ClocksyTab = .settings
     @State private var now: Date = Date()
     @StateObject var preferences: ClocksyPreferences = ClocksyPreferences()
     private let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
@@ -30,7 +30,7 @@ struct ClocksyView: View {
                     .tabItem {
                         Label(ClocksyTab.clock.rawValue, systemImage: "clock")
                     }
-                    Circle()
+                    SettingsView()
                         .tag(ClocksyTab.settings)
                         .tabItem {
                             Label(ClocksyTab.settings.rawValue, systemImage: "gear")
