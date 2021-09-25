@@ -26,12 +26,7 @@ struct ClassicHourTextIndicator: IndicatorTextBaseView {
     var fontWeightValue: String
     
     var fontWeight: Font.Weight {
-        switch(fontWeightValue) {
-        case "bold":
-            return Font.Weight.bold
-        default:
-            return Font.Weight.regular
-        }
+        Font.Weight(rawValue: fontWeightValue) ?? Font.Weight.regular
     }
     
     func content(at angle: Angle, value: Int, geometry: GeometryProxy) -> some View {
