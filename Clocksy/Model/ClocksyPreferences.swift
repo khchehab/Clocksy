@@ -6,22 +6,29 @@
 //
 
 import Foundation
+import Combine
+
+protocol PublishedWrapper: AnyObject {
+    var objectWillChange: ObservableObjectPublisher? { get set }
+}
 
 // todo see if the below can be consolidated into a single property wrapper struct
 // with extensions of whatever features available in swift
 
 // MARK: - Global App Key Wrapper
-@propertyWrapper struct ClocksyPreference<ValueType> {
+@propertyWrapper class ClocksyPreference<ValueType>: PublishedWrapper {
     private let key: ClocksyPreferenceKey
     private let defaultValue: ValueType
     private var storage: UserDefaults
     
+    var objectWillChange: ObservableObjectPublisher?
     var wrappedValue: ValueType {
         get {
             storage.object(forKey: key.rawValue) as? ValueType ?? defaultValue
         }
         set {
             storage.set(newValue, forKey: key.rawValue)
+            objectWillChange?.send()
         }
     }
     
@@ -33,11 +40,12 @@ import Foundation
 }
 
 // MARK: - Global App Key Wrapper for Enums
-@propertyWrapper struct ClocksyRawRepresentablePreference<ValueType: RawRepresentable> {
+@propertyWrapper class ClocksyRawRepresentablePreference<ValueType: RawRepresentable>: PublishedWrapper {
     private let key: ClocksyPreferenceKey
     private let defaultValue: ValueType
     private var storage: UserDefaults
     
+    var objectWillChange: ObservableObjectPublisher?
     var wrappedValue: ValueType {
         get {
             if let rawValue = storage.object(forKey: key.rawValue) as? ValueType.RawValue,
@@ -49,6 +57,7 @@ import Foundation
         }
         set {
             storage.set(newValue.rawValue, forKey: key.rawValue)
+            objectWillChange?.send()
         }
     }
     
@@ -60,17 +69,19 @@ import Foundation
 }
 
 // MARK: - Style Preference Key Wrapper
-@propertyWrapper struct ClocksyStylePreference<ValueType> {
+@propertyWrapper class ClocksyStylePreference<ValueType>: PublishedWrapper {
     private let key: ClocksyStylePreferenceKey
     private let defaults: [ClocksyStylePreferenceKey: Any]
     private var storage: UserDefaults
     
+    var objectWillChange: ObservableObjectPublisher?
     var wrappedValue: ValueType {
         get {
             storage.object(forKey: key.rawValue) as? ValueType ?? (defaults[key] as! ValueType)
         }
         set {
             storage.set(newValue, forKey: key.rawValue)
+            objectWillChange?.send()
         }
     }
     
@@ -140,4 +151,13 @@ final class ClocksyPreferences: ObservableObject {
     
     @ClocksyStylePreference(key: .paddingRatio, defaults: Defaults.stylePreferences)
     var paddingRatio: Double
+    
+    init() {
+        let mirror = Mirror(reflecting: self)
+        mirror.children.forEach { child in
+            if let preference = child.value as? PublishedWrapper {
+                preference.objectWillChange = self.objectWillChange
+            }
+        }
+    }
 }

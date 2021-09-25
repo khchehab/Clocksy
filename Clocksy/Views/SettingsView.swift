@@ -18,8 +18,16 @@ struct SettingsView: View {
                 }
             }
             .pickerStyle(MenuPickerStyle())
-            
-            Text("Selected Style: \(preferences.style.rawValue)")
+
+            Text("Selected Style: \($preferences.style.wrappedValue.rawValue)")
+
+            Toggle("Show Analog Clock", isOn: $preferences.showAnalogClock)
+
+            Text("Selected Analog Value: \($preferences.showAnalogClock.wrappedValue ? "Yes" : "No")")
+
+            Toggle("Show Digital Clock", isOn: $preferences.showDigitalClock)
+
+            Text("Selected Digital Value: \($preferences.showDigitalClock.wrappedValue ? "Yes" : "No")")
         }
     }
 }
