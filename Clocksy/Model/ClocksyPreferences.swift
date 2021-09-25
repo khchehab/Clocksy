@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol PublishedWrapper: AnyObject {
+private protocol PublishedWrapper: AnyObject {
     var objectWillChange: ObservableObjectPublisher? { get set }
 }
 
