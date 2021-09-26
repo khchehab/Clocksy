@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var preferences: ClocksyPreferences
+    @State var isFontChooserPresented: Bool = false
     
     var body: some View {
         NavigationView {
@@ -46,7 +47,20 @@ struct SettingsView: View {
                             RatioSlider(ratio: $preferences.indicatorHourTextWidthRatio, label: "Width Ratio", systemImage: "arrow.left.and.right.square", range: 0...1, step: 0.06, format: "%0.2f")
                             RatioSlider(ratio: $preferences.indicatorHourTextBorderMarginRatio, label: "Border Margin Ratio", systemImage: "arrowtriangle.left.and.line.vertical.and.arrowtriangle.right", range: 0...1, step: 0.25, format: "%0.2f")
                             
-                            // font name
+                            Button(action: {
+                                self.isFontChooserPresented.toggle()
+                            }, label: {
+                                HStack {
+                                    Label("Font Name", systemImage: "character")
+                                    Text(preferences.indicatorHourTextFontName)
+                                        .frame(maxWidth: .infinity)
+                                }
+                            })
+                            .sheet(isPresented: $isFontChooserPresented) {
+                                FontChooser(fontName: $preferences.indicatorHourTextFontName) {
+                                    self.isFontChooserPresented.toggle()
+                                }
+                            }
                             
                             HStack {
                                 Label("Font Weight", systemImage: "bold")
@@ -59,7 +73,7 @@ struct SettingsView: View {
                                 .frame(maxWidth: .infinity)
                             }
                             
-                            RatioSlider(ratio: $preferences.indicatorHourTextFontSizeRatio, label: "Font Size Ratio", systemImage: "text.cursor", range: 0...1, step: 0.125, format: "%0.3f")
+                            RatioSlider(ratio: $preferences.indicatorHourTextFontSizeRatio, label: "Font Size Ratio", systemImage: "textformat.size", range: 0...1, step: 0.125, format: "%0.3f")
                         }
                     }
                 }

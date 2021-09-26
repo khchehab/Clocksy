@@ -25,6 +25,7 @@
 		296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296EE39526DD79DB00307FA9 /* BorderView.swift */; };
 		2977800126F748BF001E2E1C /* ClocksyPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977800026F748BF001E2E1C /* ClocksyPreferenceKey.swift */; };
 		2977800326F74FB2001E2E1C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977800226F74FB2001E2E1C /* Defaults.swift */; };
+		297B95922700910600A96962 /* FontChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297B95912700910600A96962 /* FontChooser.swift */; };
 		2994396D26FF62010048E103 /* Font.Weight+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994396C26FF62010048E103 /* Font.Weight+Name.swift */; };
 		2994396F26FF85690048E103 /* RatioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994396E26FF85690048E103 /* RatioSlider.swift */; };
 		299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314226E9288E002E9034 /* DigitalDigit.swift */; };
@@ -62,6 +63,7 @@
 		296EE39526DD79DB00307FA9 /* BorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderView.swift; sourceTree = "<group>"; };
 		2977800026F748BF001E2E1C /* ClocksyPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksyPreferenceKey.swift; sourceTree = "<group>"; };
 		2977800226F74FB2001E2E1C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		297B95912700910600A96962 /* FontChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontChooser.swift; sourceTree = "<group>"; };
 		2994396C26FF62010048E103 /* Font.Weight+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font.Weight+Name.swift"; sourceTree = "<group>"; };
 		2994396E26FF85690048E103 /* RatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioSlider.swift; sourceTree = "<group>"; };
 		299F314226E9288E002E9034 /* DigitalDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalDigit.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				29626E9126FF515600FA9F13 /* ShowToggle.swift */,
 				2994396E26FF85690048E103 /* RatioSlider.swift */,
+				297B95912700910600A96962 /* FontChooser.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				296EE38F26DD469F00307FA9 /* TimeUtilities.swift in Sources */,
 				29626E8926F7AC2400FA9F13 /* ClocksyTab.swift in Sources */,
 				296EE39326DD587A00307FA9 /* GeometryProxy+Circle.swift in Sources */,
+				297B95922700910600A96962 /* FontChooser.swift in Sources */,
 				296EE39626DD79DB00307FA9 /* BorderView.swift in Sources */,
 				293BC1B526DBB648003D1231 /* CGRect+Circle.swift in Sources */,
 				2977800326F74FB2001E2E1C /* Defaults.swift in Sources */,
