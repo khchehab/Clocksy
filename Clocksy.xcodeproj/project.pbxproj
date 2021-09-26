@@ -30,7 +30,7 @@
 		2994396F26FF85690048E103 /* RatioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994396E26FF85690048E103 /* RatioSlider.swift */; };
 		299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314226E9288E002E9034 /* DigitalDigit.swift */; };
 		299F314626E92C0E002E9034 /* DigitBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314526E92C0E002E9034 /* DigitBaseView.swift */; };
-		299F314A26E92FDB002E9034 /* DigitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314926E92FDB002E9034 /* DigitView.swift */; };
+		299F314A26E92FDB002E9034 /* DigitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314926E92FDB002E9034 /* DigitsView.swift */; };
 		299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314B26E937FF002E9034 /* DigitalClockView.swift */; };
 		29EBACFB26E015CF00026739 /* BorderBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBACFA26E015CF00026739 /* BorderBaseView.swift */; };
 		29EBACFE26E0160000026739 /* ClassicBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBACFD26E0160000026739 /* ClassicBorder.swift */; };
@@ -70,7 +70,7 @@
 		2994396E26FF85690048E103 /* RatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioSlider.swift; sourceTree = "<group>"; };
 		299F314226E9288E002E9034 /* DigitalDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalDigit.swift; sourceTree = "<group>"; };
 		299F314526E92C0E002E9034 /* DigitBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitBaseView.swift; sourceTree = "<group>"; };
-		299F314926E92FDB002E9034 /* DigitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitView.swift; sourceTree = "<group>"; };
+		299F314926E92FDB002E9034 /* DigitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitsView.swift; sourceTree = "<group>"; };
 		299F314B26E937FF002E9034 /* DigitalClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalClockView.swift; sourceTree = "<group>"; };
 		29EBACFA26E015CF00026739 /* BorderBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderBaseView.swift; sourceTree = "<group>"; };
 		29EBACFD26E0160000026739 /* ClassicBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicBorder.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 				296EE39526DD79DB00307FA9 /* BorderView.swift */,
 				29EBACFF26E0174700026739 /* IndicatorView.swift */,
 				29EBAD0826E2795E00026739 /* ArmsView.swift */,
-				299F314926E92FDB002E9034 /* DigitView.swift */,
+				299F314926E92FDB002E9034 /* DigitsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 				29626E8C26F7B84000FA9F13 /* SettingsView.swift in Sources */,
 				2921A09B26F7A76200D31490 /* ClocksyView.swift in Sources */,
 				29EBAD0E26E2A74F00026739 /* ClassicArm.swift in Sources */,
-				299F314A26E92FDB002E9034 /* DigitView.swift in Sources */,
+				299F314A26E92FDB002E9034 /* DigitsView.swift in Sources */,
 				29497DA726DA83BD000AB6DE /* AnalogClockView.swift in Sources */,
 				293BC1B026DBAC28003D1231 /* Constants.swift in Sources */,
 			);
