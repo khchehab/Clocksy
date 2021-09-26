@@ -8,34 +8,25 @@
 import SwiftUI
 
 struct ClocksyView: View {
-    @State private var currentTab: ClocksyTab = .clock
+    @State private var currentTab: ClocksyTab = .settings
     @State private var now: Date = Date()
     @StateObject var preferences: ClocksyPreferences = ClocksyPreferences()
     private let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
     
     var body: some View {
-        GeometryReader { proxy in
-            NavigationView {
-                TabView(selection: $currentTab) {
-                    VStack {
-                        if preferences.showAnalogClock {
-                            AnalogClockView(now: $now, size: proxy.circle.size)
-                        }
-                        
-                        if preferences.showDigitalClock {
-                            DigitalClockView(now: $now, size: proxy.size)
-                        }
-                    }
+        NavigationView {
+            TabView(selection: $currentTab) {
+                ClockView(now: $now)
                     .tag(ClocksyTab.clock)
                     .tabItem {
                         Label(ClocksyTab.clock.rawValue, systemImage: "clock")
                     }
-                    SettingsView()
-                        .tag(ClocksyTab.settings)
-                        .tabItem {
-                            Label(ClocksyTab.settings.rawValue, systemImage: "gear")
-                        }
-                }
+                
+                SettingsView()
+                    .tag(ClocksyTab.settings)
+                    .tabItem {
+                        Label(ClocksyTab.settings.rawValue, systemImage: "gear")
+                    }
             }
             .environmentObject(preferences)
             .onReceive(timer) { time in
