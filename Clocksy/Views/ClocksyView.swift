@@ -15,21 +15,17 @@ struct ClocksyView: View {
     
     var body: some View {
         TabView(selection: $currentTab) {
-            NavigationView {
-                ClockView(now: $now)
-            }
-            .tag(ClocksyTab.clock)
-            .tabItem {
-                Label(ClocksyTab.clock.rawValue, systemImage: "clock")
-            }
+            ClockView(now: $now)
+                .tag(ClocksyTab.clock)
+                .tabItem {
+                    Label(ClocksyTab.clock.rawValue, systemImage: "clock")
+                }
             
-            NavigationView {
-                SettingsView()
-            }
-            .tag(ClocksyTab.settings)
-            .tabItem {
-                Label(ClocksyTab.settings.rawValue, systemImage: "gear")
-            }
+            SettingsView()
+                .tag(ClocksyTab.settings)
+                .tabItem {
+                    Label(ClocksyTab.settings.rawValue, systemImage: "gear")
+                }
         }
         .environmentObject(preferences)
         .onReceive(timer) { time in
