@@ -14,16 +14,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             List {
-                HStack {
-                    Label("Style", systemImage: "paintpalette")
-                    Picker(preferences.style.rawValue.localizedCapitalized, selection: $preferences.style) {
-                        ForEach(ClockStyle.allCases, id: \.self) {
-                            Text($0.rawValue.localizedCapitalized)
-                        }
-                    }
-                    .pickerStyle(MenuPickerStyle())
-                    .frame(maxWidth: .infinity)
-                }
+                OptionPicker(option: $preferences.style, label: "Style", systemImage: "paintpalette")
 
                 ShowToggle(isOn: $preferences.showAnalogClock, label: "Show Analog", systemImage: "clock")
 
@@ -62,16 +53,7 @@ struct SettingsView: View {
                                 }
                             }
                             
-                            HStack {
-                                Label("Font Weight", systemImage: "bold")
-                                Picker(preferences.indicatorHourTextFontWeight.rawValue.localizedCapitalized, selection: $preferences.indicatorHourTextFontWeight) {
-                                    ForEach(Font.Weight.allCases, id: \.self) {
-                                        Text($0.rawValue.localizedCapitalized)
-                                    }
-                                }
-                                .pickerStyle(MenuPickerStyle())
-                                .frame(maxWidth: .infinity)
-                            }
+                            OptionPicker(option: $preferences.indicatorHourTextFontWeight, label: "Font Weight", systemImage: "bold")
                             
                             RatioSlider(ratio: $preferences.indicatorHourTextFontSizeRatio, label: "Font Size Ratio", systemImage: "textformat.size", range: 0...1, step: 0.125, format: "%0.3f")
                         }

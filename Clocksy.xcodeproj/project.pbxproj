@@ -41,6 +41,7 @@
 		29EBAD0B26E2A39A00026739 /* Angle+Pi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */; };
 		29EBAD0E26E2A74F00026739 /* ClassicArm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29EBAD0D26E2A74F00026739 /* ClassicArm.swift */; };
 		29FEB81C2700A97E00FFB68B /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEB81B2700A97E00FFB68B /* ClockView.swift */; };
+		29FEB81E2700AEA800FFB68B /* OptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FEB81D2700AEA800FFB68B /* OptionPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		29EBAD0A26E2A39A00026739 /* Angle+Pi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Angle+Pi.swift"; sourceTree = "<group>"; };
 		29EBAD0D26E2A74F00026739 /* ClassicArm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicArm.swift; sourceTree = "<group>"; };
 		29FEB81B2700A97E00FFB68B /* ClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		29FEB81D2700AEA800FFB68B /* OptionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 				29626E9126FF515600FA9F13 /* ShowToggle.swift */,
 				2994396E26FF85690048E103 /* RatioSlider.swift */,
 				297B95912700910600A96962 /* FontChooser.swift */,
+				29FEB81D2700AEA800FFB68B /* OptionPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			files = (
 				2994396D26FF62010048E103 /* Font.Weight+Name.swift in Sources */,
 				29626E8E26F7BB0D00FA9F13 /* ClockStyle.swift in Sources */,
+				29FEB81E2700AEA800FFB68B /* OptionPicker.swift in Sources */,
 				29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */,
 				294302E826F600370023D83F /* ClocksyPreferences.swift in Sources */,
 				29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */,
