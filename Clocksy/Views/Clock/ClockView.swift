@@ -12,26 +12,26 @@ struct ClockView: View {
     @Binding var now: Date
     
     var body: some View {
-        GeometryReader { proxy in
-            NavigationView {
-                VStack {
-                    if preferences.showAnalogClock {
-                        AnalogClockView(now: $now, size: proxy.circle.size)
-                    }
-                    
-                    if preferences.showDigitalClock {
-                        DigitalClockView(now: $now, size: proxy.size)
-                    }
+    GeometryReader { proxy in
+            VStack {
+                if preferences.showAnalogClock {
+                    AnalogClockView(now: $now, size: proxy.circle.size)
+                }
+                
+                if preferences.showDigitalClock {
+                    DigitalClockView(now: $now, size: proxy.size)
                 }
             }
-            .navigationBarTitle("Clock")
         }
+        .navigationBarTitle("Clock")
     }
 }
 
 struct ClockView_Previews: PreviewProvider {
     static var previews: some View {
-        ClockView(now: .constant(Date()))
-            .environmentObject(ClocksyPreferences())
+        NavigationView {
+            ClockView(now: .constant(Date()))
+                .environmentObject(ClocksyPreferences())
+        }
     }
 }
