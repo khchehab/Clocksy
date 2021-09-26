@@ -8,5 +8,5 @@
 import Foundation
 
 enum ClockStyle: String, CaseIterable {
-    case classic, style2, style3, style4
+    case classic
 }

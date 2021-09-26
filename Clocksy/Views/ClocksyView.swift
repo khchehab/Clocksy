@@ -18,13 +18,13 @@ struct ClocksyView: View {
             ClockView(now: $now)
                 .tag(ClocksyTab.clock)
                 .tabItem {
-                    Label(ClocksyTab.clock.rawValue, systemImage: "clock")
+                    Label(ClocksyTab.clock.rawValue.localizedCapitalized, systemImage: "clock")
                 }
             
             SettingsView()
                 .tag(ClocksyTab.settings)
                 .tabItem {
-                    Label(ClocksyTab.settings.rawValue, systemImage: "gear")
+                    Label(ClocksyTab.settings.rawValue.localizedCapitalized, systemImage: "gear")
                 }
         }
         .environmentObject(preferences)

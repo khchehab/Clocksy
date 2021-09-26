@@ -8,5 +8,5 @@
 import Foundation
 
 enum ClocksyTab: String {
-    case clock = "Clock", settings = "Settings"
+    case clock, settings
 }
