@@ -12,30 +12,30 @@ import SwiftUI
 extension Font.Weight: RawRepresentable {
     public var rawValue: String {
         switch(self) {
-        case Self.ultraLight: return "ultraLight"
-        case Self.thin: return "thin"
-        case Self.light: return "light"
-        case Self.regular: return "regular"
-        case Self.medium: return "medium"
-        case Self.semibold: return "semibold"
-        case Self.bold: return "bold"
-        case Self.heavy: return "heavy"
-        case Self.black: return "black"
+        case .ultraLight: return "ultraLight"
+        case .thin: return "thin"
+        case .light: return "light"
+        case .regular: return "regular"
+        case .medium: return "medium"
+        case .semibold: return "semibold"
+        case .bold: return "bold"
+        case .heavy: return "heavy"
+        case .black: return "black"
         default: return ""
         }
     }
     
     public init?(rawValue: String) {
         switch(rawValue) {
-        case "ultraLight": self = Self.ultraLight
-        case "thin": self = Self.thin
-        case "light": self = Self.light
-        case "regular": self = Self.regular
-        case "medium": self = Self.medium
-        case "semibold": self = Self.semibold
-        case "bold": self = Self.bold
-        case "heavy": self = Self.heavy
-        case "black": self = Self.black
+        case "ultraLight": self = .ultraLight
+        case "thin": self = .thin
+        case "light": self = .light
+        case "regular": self = .regular
+        case "medium": self = .medium
+        case "semibold": self = .semibold
+        case "bold": self = .bold
+        case "heavy": self = .heavy
+        case "black": self = .black
         default: return nil
         }
     }
