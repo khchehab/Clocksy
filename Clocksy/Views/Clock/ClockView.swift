@@ -21,11 +21,9 @@ struct ClockView: View {
                 if preferences.showDigitalClock {
                     DigitalClockView(now: $now, size: proxy.size)
                 }
-                
-                .navigationBarTitle("Clock")
             }
+            .navigationBarTitle("Clock")
         }
-        .navigationBarTitle("Clock")
     }
 }
 
