@@ -76,6 +76,23 @@ struct SettingsView: View {
                             RatioSlider(ratio: $preferences.indicatorHourTextFontSizeRatio, label: "Font Size Ratio", systemImage: "textformat.size", range: 0...1, step: 0.125, format: "%0.3f")
                         }
                     }
+                    
+                    DisclosureGroup("Arms") {
+                        DisclosureGroup("Hours") {
+                            RatioSlider(ratio: $preferences.armHourRadiusRatio, label: "Radius Ratio", systemImage: "arrow.up.backward.and.arrow.down.forward", range: 0...1, step: 0.01, format: "%0.2f")
+                            RatioSlider(ratio: $preferences.armHourMarginRatio, label: "Margin Ratio", systemImage: "arrow.up.left.and.arrow.down.right.circle", range: 0...1, step: 0.2, format: "%0.1f")
+                        }
+                        
+                        DisclosureGroup("Minutes") {
+                            RatioSlider(ratio: $preferences.armMinuteRadiusRatio, label: "Radius Ratio", systemImage: "arrow.up.backward.and.arrow.down.forward", range: 0...1, step: 0.005, format: "%0.2f")
+                            RatioSlider(ratio: $preferences.armMinuteMarginRatio, label: "Margin Ratio", systemImage: "arrow.up.left.and.arrow.down.right.circle", range: 0...1, step: 0.25, format: "%0.1f")
+                        }
+                        
+                        DisclosureGroup("Seconds") {
+                            RatioSlider(ratio: $preferences.armSecondRadiusRatio, label: "Radius Ratio", systemImage: "arrow.up.backward.and.arrow.down.forward", range: 0...1, step: 0.0025, format: "%0.2f")
+                            RatioSlider(ratio: $preferences.armSecondMarginRatio, label: "Margin Ratio", systemImage: "arrow.up.left.and.arrow.down.right.circle", range: 0...1, step: 0.33, format: "%0.1f")
+                        }
+                    }
                 }
 
                 ShowToggle(isOn: $preferences.showDigitalClock, label: "Show Digital", systemImage: "24.circle")
