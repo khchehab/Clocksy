@@ -12,7 +12,7 @@ struct ClockView: View {
     @Binding var now: Date
     
     var body: some View {
-    GeometryReader { proxy in
+        GeometryReader { proxy in
             VStack {
                 if preferences.showAnalogClock {
                     AnalogClockView(now: $now, size: proxy.circle.size)
@@ -22,8 +22,8 @@ struct ClockView: View {
                     DigitalClockView(now: $now, size: proxy.size)
                 }
             }
+            .navigationBarTitle("Clock")
         }
-        .navigationBarTitle("Clock")
     }
 }
 
