@@ -23,11 +23,7 @@ struct ClassicHourTextIndicator: IndicatorTextBaseView {
     var borderMarginRatio: CGFloat
     var fontName: String
     var fontSizeRatio: CGFloat
-    var fontWeightValue: String
-    
-    var fontWeight: Font.Weight {
-        Font.Weight(rawValue: fontWeightValue) ?? Font.Weight.regular
-    }
+    var fontWeight: Font.Weight
     
     func content(at angle: Angle, value: Int, geometry: GeometryProxy) -> some View {
         return Text(String(value))

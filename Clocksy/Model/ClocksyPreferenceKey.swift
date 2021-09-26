@@ -7,30 +7,50 @@
 
 import Foundation
 
-enum ClocksyPreferenceKey: String {
-    case style = "style", showAnalogClock = "show-analog-clock", showDigitalClock = "show-digital-clock"
+class ClocksyPreferenceKey: Hashable {
+    private(set) var key: String
+    fileprivate init(family: String, code: String) {
+        self.key = family + "." + code
+    }
+    
+    static func == (lhs: ClocksyPreferenceKey, rhs: ClocksyPreferenceKey) -> Bool {
+        return lhs.key == rhs.key
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(key)
+    }
 }
 
-// todo see if this can be improved to be more OOP or follow more the Swift features
-enum ClocksyStylePreferenceKey: String {
-    // MARK: - Analog Clock Keys
+class ClocksyGlobalPreferenceKey: ClocksyPreferenceKey {
+    static let style = ClocksyGlobalPreferenceKey(family: "global", code: "style")
+    static let showAnalogClock = ClocksyGlobalPreferenceKey(family: "global", code: "show-analog-clock")
+    static let showDigitalClock = ClocksyGlobalPreferenceKey(family: "global", code: "show-digital-clock")
+}
+
+class ClocksyStylePreferenceKey: ClocksyPreferenceKey {
+    static let borderWidthRatio = ClocksyStylePreferenceKey(family: "style", code: "border.width-ratio")
     
-    // MARK: - Border Keys
-    case borderWidthRatio = "border.width-ratio"
+    static let indicatorHourWidthRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.width-ratio")
+    static let indicatorHourBorderMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.border-margin-ratio")
     
-    // MARK: - Indicator Keys
-    case indicatorHourWidthRatio = "indicator.hour.width-ratio", indicatorHourBorderMarginRatio = "indicator.hour.border-margin-ratio"
-    case indicatorMinuteWidthRatio = "indicator.minute.width-ratio", indicatorMinuteBorderMarginRatio = "indicator.minute.border-margin-ratio"
-    case indicatorHourTextWidthRatio = "indicator.hour.text.width-ratio", indicatorHourTextBorderMarginRatio = "indicator.hour.text.border-margin-ratio",
-         indicatorHourTextFontName = "indicator.hour.text.font-name", indicatorHourTextFontWeight = "indicator.hour.text.font-weight",
-         indicatorHourTextFontSizeRatio = "indicator.hour.text.font-size-ratio"
+    static let indicatorMinuteWidthRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.minute.width-ratio")
+    static let indicatorMinuteBorderMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.minute.border-margin-ratio")
     
-    // MARK: - Arm Keys
-    case armHourRadiusRatio = "arm.hour.radius-ratio", armHourMarginRatio = "arm.hour.margin-ratio"
-    case armMinuteRadiusRatio = "arm.minute.radius-ratio", armMinuteMarginRatio = "arm.minute.margin-ratio"
-    case armSecondRadiusRatio = "arm.second.radius-ratio", armSecondMarginRatio = "arm.second.margin-ratio"
+    static let indicatorHourTextWidthRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.text.width-ratio")
+    static let indicatorHourTextBorderMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.text.border-margin-ratio")
+    static let indicatorHourTextFontName = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.text.font-name")
+    static let indicatorHourTextFontWeight = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.text.font-weight")
+    static let indicatorHourTextFontSizeRatio = ClocksyStylePreferenceKey(family: "style", code: "indicator.hour.text.font-size-ratio")
     
-    // MARK: - Digital Clock Keys
+    static let armHourRadiusRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.hour.radius-ratio")
+    static let armHourMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.hour.margin-ratio")
     
-    case paddingRatio = "padding"
+    static let armMinuteRadiusRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.minute.radius-ratio")
+    static let armMinuteMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.minute.margin-ratio")
+    
+    static let armSecondRadiusRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.second.radius-ratio")
+    static let armSecondMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.second.margin-ratio")
+
+    static let paddingRatio = ClocksyStylePreferenceKey(family: "style", code: "padding")
 }

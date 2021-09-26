@@ -21,7 +21,7 @@ struct IndicatorView: View {
                                  borderMarginRatio: CGFloat(preferences.indicatorHourTextBorderMarginRatio),
                                  fontName: preferences.indicatorHourTextFontName,
                                  fontSizeRatio: CGFloat(preferences.indicatorHourTextFontSizeRatio),
-                                 fontWeightValue: preferences.indicatorHourTextFontWeight)
+                                 fontWeight: preferences.indicatorHourTextFontWeight)
     }
     
     private var minuteIndicator: some IndicatorBaseView {

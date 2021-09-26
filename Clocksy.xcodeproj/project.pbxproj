@@ -27,7 +27,6 @@
 		2977800326F74FB2001E2E1C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977800226F74FB2001E2E1C /* Defaults.swift */; };
 		2994396D26FF62010048E103 /* Font.Weight+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994396C26FF62010048E103 /* Font.Weight+Name.swift */; };
 		2994396F26FF85690048E103 /* RatioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994396E26FF85690048E103 /* RatioSlider.swift */; };
-		2994397126FF94240048E103 /* OptionPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2994397026FF94240048E103 /* OptionPicker.swift */; };
 		299F314326E9288E002E9034 /* DigitalDigit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314226E9288E002E9034 /* DigitalDigit.swift */; };
 		299F314626E92C0E002E9034 /* DigitBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314526E92C0E002E9034 /* DigitBaseView.swift */; };
 		299F314A26E92FDB002E9034 /* DigitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299F314926E92FDB002E9034 /* DigitView.swift */; };
@@ -65,7 +64,6 @@
 		2977800226F74FB2001E2E1C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		2994396C26FF62010048E103 /* Font.Weight+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font.Weight+Name.swift"; sourceTree = "<group>"; };
 		2994396E26FF85690048E103 /* RatioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatioSlider.swift; sourceTree = "<group>"; };
-		2994397026FF94240048E103 /* OptionPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionPicker.swift; sourceTree = "<group>"; };
 		299F314226E9288E002E9034 /* DigitalDigit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalDigit.swift; sourceTree = "<group>"; };
 		299F314526E92C0E002E9034 /* DigitBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitBaseView.swift; sourceTree = "<group>"; };
 		299F314926E92FDB002E9034 /* DigitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitView.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			children = (
 				29626E9126FF515600FA9F13 /* ShowToggle.swift */,
 				2994396E26FF85690048E103 /* RatioSlider.swift */,
-				2994397026FF94240048E103 /* OptionPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -332,7 +329,6 @@
 				29626E8E26F7BB0D00FA9F13 /* ClockStyle.swift in Sources */,
 				29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */,
 				294302E826F600370023D83F /* ClocksyPreferences.swift in Sources */,
-				2994397126FF94240048E103 /* OptionPicker.swift in Sources */,
 				29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */,
 				299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */,
 				2921A09926F785FA00D31490 /* ArmBaseView.swift in Sources */,
