@@ -15,7 +15,7 @@ struct SettingsView: View {
             List {
                 HStack {
                     Label("Style", systemImage: "paintpalette")
-                    Picker($preferences.style.wrappedValue.rawValue, selection: $preferences.style) {
+                    Picker(preferences.style.rawValue.localizedCapitalized, selection: $preferences.style) {
                         ForEach(ClockStyle.allCases, id: \.self) {
                             Text($0.rawValue.localizedCapitalized)
                         }
@@ -45,8 +45,19 @@ struct SettingsView: View {
                         DisclosureGroup("Hour Text") {
                             RatioSlider(ratio: $preferences.indicatorHourTextWidthRatio, label: "Width Ratio", systemImage: "arrow.left.and.right.square", range: 0...1, step: 0.06, format: "%0.2f")
                             RatioSlider(ratio: $preferences.indicatorHourTextBorderMarginRatio, label: "Border Margin Ratio", systemImage: "arrowtriangle.left.and.line.vertical.and.arrowtriangle.right", range: 0...1, step: 0.25, format: "%0.2f")
-                            //
-                            //
+                            // font name
+                            
+                            HStack {
+                                Label("Font Weight", systemImage: "bold")
+                                Picker(preferences.indicatorHourTextFontWeight.rawValue.localizedCapitalized, selection: $preferences.indicatorHourTextFontWeight) {
+                                    ForEach(Font.Weight.allCases, id: \.self) {
+                                        Text($0.rawValue.localizedCapitalized)
+                                    }
+                                }
+                                .pickerStyle(MenuPickerStyle())
+                                .frame(maxWidth: .infinity)
+                            }
+                            
                             RatioSlider(ratio: $preferences.indicatorHourTextFontSizeRatio, label: "Font Size Ratio", systemImage: "text.cursor", range: 0...1, step: 0.125, format: "%0.3f")
                         }
                     }
