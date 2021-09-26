@@ -23,8 +23,9 @@ struct ClockView: View {
                         DigitalClockView(now: $now, size: proxy.size)
                     }
                 }
+                
+                .navigationBarTitle("Clock")
             }
-            .navigationBarTitle("Clock")
         }
     }
 }
