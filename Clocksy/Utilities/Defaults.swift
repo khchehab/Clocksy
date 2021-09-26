@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Defaults {
+    static let advancedMode: Bool = false
     static let style: ClockStyle = .classic
     static let showAnalogClock: Bool = true
     static let showDigitalClock: Bool = true

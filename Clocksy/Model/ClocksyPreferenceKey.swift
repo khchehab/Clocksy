@@ -23,6 +23,7 @@ class ClocksyPreferenceKey: Hashable {
 }
 
 class ClocksyGlobalPreferenceKey: ClocksyPreferenceKey {
+    static let advancedMode = ClocksyGlobalPreferenceKey(family: "global", code: "advanced-mode")
     static let style = ClocksyGlobalPreferenceKey(family: "global", code: "style")
     static let showAnalogClock = ClocksyGlobalPreferenceKey(family: "global", code: "show-analog-clock")
     static let showDigitalClock = ClocksyGlobalPreferenceKey(family: "global", code: "show-digital-clock")

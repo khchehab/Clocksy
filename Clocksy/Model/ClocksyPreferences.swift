@@ -76,6 +76,9 @@ private protocol PublishedWrapper: AnyObject {
 final class ClocksyPreferences: ObservableObject {
     // MARK: - Global App Preferences
     
+    @ClocksyPreference(key: .advancedMode, default: Defaults.advancedMode)
+    var advancedMode: Bool
+    
     @ClocksyPreference(key: .style, default: Defaults.style)
     var style: ClockStyle
     

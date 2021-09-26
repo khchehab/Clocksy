@@ -26,7 +26,7 @@ struct SettingsView: View {
 
                 ShowToggle(isOn: $preferences.showAnalogClock, label: "Show Analog", systemImage: "clock")
 
-                if preferences.showAnalogClock {
+                if preferences.advancedMode && preferences.showAnalogClock {
                     DisclosureGroup("Border") {
                         RatioSlider(ratio: $preferences.borderWidthRatio, label: "Width Ratio", systemImage: "arrow.left.and.right.square", range: 0...1, step: 0.02, format: "%0.2f")
                     }
@@ -45,6 +45,7 @@ struct SettingsView: View {
                         DisclosureGroup("Hour Text") {
                             RatioSlider(ratio: $preferences.indicatorHourTextWidthRatio, label: "Width Ratio", systemImage: "arrow.left.and.right.square", range: 0...1, step: 0.06, format: "%0.2f")
                             RatioSlider(ratio: $preferences.indicatorHourTextBorderMarginRatio, label: "Border Margin Ratio", systemImage: "arrowtriangle.left.and.line.vertical.and.arrowtriangle.right", range: 0...1, step: 0.25, format: "%0.2f")
+                            
                             // font name
                             
                             HStack {
@@ -65,11 +66,18 @@ struct SettingsView: View {
 
                 ShowToggle(isOn: $preferences.showDigitalClock, label: "Show Digital", systemImage: "24.circle")
 
-                if preferences.showDigitalClock {
+                if preferences.advancedMode && preferences.showDigitalClock {
                     RatioSlider(ratio: $preferences.paddingRatio, label: "Padding Ratio", systemImage: "arrowtriangle.right.and.line.vertical.and.arrowtriangle.left", range: 0...1, step: 0.005, format: "%0.3f")
                 }
             }
             .navigationBarTitle("Settings")
+            .toolbar {
+                Button(action: {
+                    $preferences.advancedMode.wrappedValue.toggle()
+                }, label: {
+                    Text(preferences.advancedMode ? "Basic" : "Advanced")
+                })
+            }
         }
     }
 }
