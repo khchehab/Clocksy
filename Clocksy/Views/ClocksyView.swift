@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ClocksyView: View {
-    @State private var currentTab: ClocksyTab = .settings
+    @State private var currentTab: ClocksyTab = .clock
     @State private var now: Date = Date()
     @StateObject var preferences: ClocksyPreferences = ClocksyPreferences()
     private let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
