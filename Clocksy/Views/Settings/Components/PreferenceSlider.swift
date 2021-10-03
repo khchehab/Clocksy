@@ -28,6 +28,9 @@ struct PreferenceSlider: View {
                     .onChange(of: maximumValue) { newValue in
                         value = min(newValue, maximumValue)
                     }
+                    .onChange(of: minimumValue) { newValue in
+                        value = max(newValue, minimumValue)
+                    }
                 
                 Text(String(format: format, value))
             }
