@@ -58,6 +58,6 @@ struct DigitsView: View {
 
 struct DigitsView_Previews: PreviewProvider {
     static var previews: some View {
-        DigitsView(hours: 88, minutes: 88, seconds: 88, width: 300, padding: 2)
+        DigitsView(hours: 88, minutes: 88, seconds: 88, width: 363, padding: 2)
     }
 }

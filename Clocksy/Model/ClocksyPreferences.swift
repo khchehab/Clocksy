@@ -67,6 +67,10 @@ private protocol PublishedWrapper: AnyObject {
         self.init(key: key as ClocksyPreferenceKey, default: defaultValue, storage: storage)
     }
     
+    convenience init(key: ClocksyStylePreferenceKey, default defaultValue: ValueType, storage: UserDefaults = .standard) {
+        self.init(key: key as ClocksyPreferenceKey, default: defaultValue, storage: storage)
+    }
+    
     convenience init(key: ClocksyStylePreferenceKey, defaults: [ClocksyPreferenceKey: Any], storage: UserDefaults = .standard) {
         let defaultValue: ValueType = defaults[key] as! ValueType
         self.init(key: key as ClocksyPreferenceKey, default: defaultValue, storage: storage)
@@ -133,8 +137,8 @@ final class ClocksyPreferences: ObservableObject {
     
     // MARK: - Digital Clock Preferences
     
-    @ClocksyPreference(key: .paddingRatio, defaults: Defaults.stylePreferences)
-    var paddingRatio: Double
+    @ClocksyPreference(key: .padding, default: 0)
+    var padding: Double
     
     init() {
         let mirror = Mirror(reflecting: self)

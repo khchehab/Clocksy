@@ -14,7 +14,7 @@ struct DigitalClockView: View {
     
     var body: some View {
         let width = size.width
-        let padding = CGFloat(preferences.paddingRatio) * width
+        let padding = CGFloat(preferences.padding)
         let (hours, minutes, seconds) = getComponents(of: now)
         DigitsView(hours: hours, minutes: minutes, seconds: seconds, width: width - (padding * 6), padding: padding)
             .frame(width: width)

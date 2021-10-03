@@ -14,25 +14,27 @@ struct ClocksyView: View {
     private let timer = Timer.publish(every: 1, on: .current, in: .common).autoconnect()
     
     var body: some View {
-        TabView(selection: $currentTab) {
-            ClockView(now: $now)
-                .tag(ClocksyTab.clock)
-                .tabItem {
-                    Label(ClocksyTab.clock.rawValue.localizedCapitalized, systemImage: "clock")
-                }
-            
-            SettingsView()
-                .tag(ClocksyTab.settings)
-                .tabItem {
-                    Label(ClocksyTab.settings.rawValue.localizedCapitalized, systemImage: "gear")
-                }
-        }
-        .environmentObject(preferences)
-        .onReceive(timer) { time in
-            self.now = time
-        }
-        .onDisappear {
-            self.timer.upstream.connect().cancel()
+        GeometryReader { proxy in
+            TabView(selection: $currentTab) {
+                ClockView(now: $now)
+                    .tag(ClocksyTab.clock)
+                    .tabItem {
+                        Label(ClocksyTab.clock.rawValue.localizedCapitalized, systemImage: "clock")
+                    }
+                
+                SettingsView(width: proxy.size.width)
+                    .tag(ClocksyTab.settings)
+                    .tabItem {
+                        Label(ClocksyTab.settings.rawValue.localizedCapitalized, systemImage: "gear")
+                    }
+            }
+            .environmentObject(preferences)
+            .onReceive(timer) { time in
+                self.now = time
+            }
+            .onDisappear {
+                self.timer.upstream.connect().cancel()
+            }
         }
     }
 }

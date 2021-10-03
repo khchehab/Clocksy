@@ -34,11 +34,7 @@ struct Defaults {
         // MARK: - Arm Defaults
         ClocksyStylePreferenceKey.armHourRadiusRatio: 1.0 / 100.0, ClocksyStylePreferenceKey.armHourMarginRatio: 1.0 / 5.0,
         ClocksyStylePreferenceKey.armMinuteRadiusRatio: 1.0 / 200.0, ClocksyStylePreferenceKey.armMinuteMarginRatio: 1.0 / 4.0,
-        ClocksyStylePreferenceKey.armSecondRadiusRatio: 1.0 / 400.0, ClocksyStylePreferenceKey.armSecondMarginRatio: 1.0 / 3.0,
-        
-        // MARK: - Digital Clock Defaults
-        
-        ClocksyStylePreferenceKey.paddingRatio: 1.0 / 200.0
+        ClocksyStylePreferenceKey.armSecondRadiusRatio: 1.0 / 400.0, ClocksyStylePreferenceKey.armSecondMarginRatio: 1.0 / 3.0
     ]
     
     private init() {}

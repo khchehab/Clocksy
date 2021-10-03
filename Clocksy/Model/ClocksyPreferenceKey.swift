@@ -53,5 +53,5 @@ class ClocksyStylePreferenceKey: ClocksyPreferenceKey {
     static let armSecondRadiusRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.second.radius-ratio")
     static let armSecondMarginRatio = ClocksyStylePreferenceKey(family: "style", code: "arm.second.margin-ratio")
 
-    static let paddingRatio = ClocksyStylePreferenceKey(family: "style", code: "padding")
+    static let padding = ClocksyStylePreferenceKey(family: "style", code: "padding")
 }
