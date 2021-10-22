@@ -24,24 +24,25 @@ struct DigitsView: View {
     }
     
     var body: some View {
-        let clockWidth: CGFloat = width - (padding * 6)
-        let digitWidth: CGFloat = clockWidth / 7
-        let separatorWidth: CGFloat = clockWidth / 14
+        // the separator width is half the digit width
+        let totalPadding = padding * 5.0
+        let digitWidth = (width - totalPadding) / 7.0
+        let separatorWidth = digitWidth / 2.0
         
         HStack(spacing: 0) {
             ForEach(split(digit: hours), id: \.self) { number in
                 digits[number]
                     .frame(width: digitWidth, height: digitWidth * 2)
-                    .padding(.horizontal, padding)
+                    .padding(.leading, padding)
             }
             
             separator
                 .frame(width: separatorWidth, height: separatorWidth * 2)
             
-            ForEach(split(digit: minutes), id: \.self) { number in
+            IndexedForEach(split(digit: minutes), id: \.self) { index, number in
                 digits[number]
                     .frame(width: digitWidth, height: digitWidth * 2)
-                    .padding(.horizontal, padding)
+                    .padding(.trailing, index == 0 ? padding : 0)
             }
             
             separator
@@ -50,14 +51,20 @@ struct DigitsView: View {
             ForEach(split(digit: seconds), id: \.self) { number in
                 digits[number]
                     .frame(width: digitWidth, height: digitWidth * 2)
-                    .padding(.horizontal, padding)
+                    .padding(.trailing, padding)
             }
         }
+//        .frame(width: width, height: width / 2)
     }
 }
 
 struct DigitsView_Previews: PreviewProvider {
     static var previews: some View {
-        DigitsView(hours: 88, minutes: 88, seconds: 88, width: 363, padding: 2)
+        DigitsView(hours: 88, minutes: 88, seconds: 88, width: 375, padding: 6)
+        
+        if #available(iOS 15.0, *) {
+            DigitsView(hours: 88, minutes: 88, seconds: 88, width: 724, padding: 0)
+                .previewInterfaceOrientation(.landscapeLeft)
+        }
     }
 }

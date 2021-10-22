@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 // MARK: - Private protocols and structs to define the bars for digital digits
 private struct DigitalDigitBar {
     static let top = DigitalDigitBar([

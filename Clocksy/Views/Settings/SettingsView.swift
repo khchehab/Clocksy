@@ -13,7 +13,7 @@ struct SettingsView: View {
     var width: CGFloat
     
     var maximumPadding: Double {
-        (Double(width) * 0.1 / 6.0).rounded()
+        (Double(width) * 0.1 / 5.0).rounded()
     }
     
     var body: some View {

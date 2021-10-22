@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2914AB602709BF2300A2AA1C /* IndexedForEach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2914AB5F2709BF2200A2AA1C /* IndexedForEach.swift */; };
 		2921A09926F785FA00D31490 /* ArmBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09826F785FA00D31490 /* ArmBaseView.swift */; };
 		2921A09B26F7A76200D31490 /* ClocksyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2921A09A26F7A76200D31490 /* ClocksyView.swift */; };
 		293BC1B026DBAC28003D1231 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BC1AF26DBAC28003D1231 /* Constants.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2914AB5F2709BF2200A2AA1C /* IndexedForEach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexedForEach.swift; sourceTree = "<group>"; };
 		2921A09826F785FA00D31490 /* ArmBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmBaseView.swift; sourceTree = "<group>"; };
 		2921A09A26F7A76200D31490 /* ClocksyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClocksyView.swift; sourceTree = "<group>"; };
 		293BC1AF26DBAC28003D1231 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2914AB5E2709BF0E00A2AA1C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2914AB5F2709BF2200A2AA1C /* IndexedForEach.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		293BC1AE26DBAC1B003D1231 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 			children = (
 				29626E8A26F7B82E00FA9F13 /* Clock */,
 				29626E8F26FF511B00FA9F13 /* Settings */,
+				2914AB5E2709BF0E00A2AA1C /* Utilities */,
 				2921A09A26F7A76200D31490 /* ClocksyView.swift */,
 			);
 			path = Views;
@@ -338,6 +349,7 @@
 				29626E8E26F7BB0D00FA9F13 /* ClockStyle.swift in Sources */,
 				29FEB81E2700AEA800FFB68B /* OptionPicker.swift in Sources */,
 				29497D9126DA7DB3000AB6DE /* ClocksyApp.swift in Sources */,
+				2914AB602709BF2300A2AA1C /* IndexedForEach.swift in Sources */,
 				294302E826F600370023D83F /* ClocksyPreferences.swift in Sources */,
 				29EBAD0526E14D2F00026739 /* IndicatorBaseView.swift in Sources */,
 				299F314C26E937FF002E9034 /* DigitalClockView.swift in Sources */,
